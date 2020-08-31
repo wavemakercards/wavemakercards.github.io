@@ -1,0 +1,318 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+    body {
+        font-size: 14px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    /*
+div {
+ transition: all 0.1s ease; 
+
+}
+*/
+
+
+    #mindmap-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        overflow-y: auto;
+    }
+
+    #mindmap-list>li {
+        padding: 15px;
+        display: block;
+        background-color: var(--side-nav-bar-button-background);
+        color: var(--side-nav-bar-button-foreground);
+        cursor: pointer;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+    }
+
+    #mindmap-list>li:hover {
+        background-color: var(--side-nav-bar-button-background-hover);
+        color: var(--side-nav-bar-button-foreground-hover);
+    }
+
+    .connectingLines {
+        position: absolute;
+        border: 2px solid #ccc;
+        background-color: #ccc;
+       
+        cursor: pointer;
+    }
+
+
+    .activelines {
+        border: 1px solid #f00;
+        background-color: #f00;
+     
+    }
+
+    .connectingLines:hover {
+        position: absolute;
+        border: 4px solid #00f;
+        background-color: #00f;
+       
+    }
+
+    .mindmap-item {
+      
+        padding: 0px;
+        position: absolute;
+        outline: none;
+        box-shadow: none;
+
+        border-radius: 10px;
+    }
+
+    /*
+.mindmap-item:focus, .mindmap-item:hover{
+  background-color:rgba(0,0,0,0.05);
+}
+*/
+
+    .mindmap-item:focus>.notes,
+    .mindmap-item:hover>.notes {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=0, Color=#000000)";
+        /*IE 8*/
+        -moz-box-shadow: 0 0 13px rgba(0, 0, 0, 0.4);
+        /*FF 3.5+*/
+        -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.4);
+        /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+        box-shadow: 0 0 13px rgba(0, 0, 0, 0.4);
+        /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#000000);
+        /*IE 5.5-7*/
+    }
+
+    .notes:focus {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=0, Color=#000000)";
+        /*IE 8*/
+        -moz-box-shadow: 0 0 13px rgba(0, 0, 0, 0.4);
+        /*FF 3.5+*/
+        -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.4);
+        /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+        box-shadow: 0 0 13px rgba(0, 0, 0, 0.4);
+        /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#000000);
+        /*IE 5.5-7*/
+    }
+
+    .mindmap-item>.mindmapHandle {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: var(--c8);
+        color: var(--c0);
+        padding: 2px 3px 2px 3px;
+        font-size: 0.7em;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+
+
+    .mindmap-item>.linker {
+        position: absolute;
+        background-color: var(--interface-button-background-success);
+        color: var(--interface-button-foreground-success);
+        padding: 2px 3px 2px 3px;
+        font-size: 0.7em;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        top: 0px;
+        right: 0px;
+
+
+        cursor: pointer;
+
+    }
+
+    .mindmap-item>.linker:hover {
+        background-color: var(--c9);
+        color: var(--c0);
+    }
+
+    button {
+        border: 0px;
+    }
+
+    .mindmap-item>.trash {
+        position: absolute;
+        background-color: var(--interface-button-background-danger);
+        color: var(--interface-button-foreground-danger);
+        border-radius: 10px;
+        padding: 2px 3px 2px 3px;
+        font-size: 0.7em;
+        width: 20px;
+        height: 20px;
+
+        bottom: 0px;
+        left: 0px;
+
+        cursor: pointer;
+    }
+
+
+
+    .mindmap-item>.trash:hover {
+        /*
+        background-color: var(--interface-button-background-danger-hover);
+        color: var(--interface-button-foreground-danger-hover);
+        */
+    }
+
+
+
+    .mindmap-item>.edit {
+        position: absolute;
+        background-color: var(--interface-button-background-success);
+        color: var(--interface-button-foreground-success);
+        border-radius: 10px;
+        padding: 2px 3px 2px 3px;
+        font-size: 0.7em;
+        width: 20px;
+        height: 20px;
+        bottom: 0px;
+        right: 0px;
+        cursor: pointer;
+    }
+
+
+    .mindmap-item>.nodeitem {
+        padding: 5px;
+        margin: 10px;
+        border: 0px;
+        border: 5px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1em;
+        resize: auto;
+    }
+
+    #mindmap_tools {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 50px;
+        background-color: var(--c9);
+        color: var(--c0);
+    }
+
+    #makescrolly{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        overflow: auto;
+    }
+
+    #mindmap_items {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    #mindmap_line {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    #add_mindmap_item {
+        /*
+        height: 50px;
+        background-color: #ddd;
+        color: #212121;
+        border: 0px;
+        font-size: 1.2em;
+        */
+    }
+
+    #mindmap_link_tooltip {
+        position: absolute;
+        top: -100px;
+        color: #fff;
+        background-color: #00d;
+        padding: 3px;
+        font-size: 0.7em;
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+      
+    }
+
+    #linktip {
+        position: absolute;
+        display: inline;
+        background-color: var(--c9);
+        color: var(--c0);
+        padding: 5px;
+        font-size: 0.7em;
+        border-radius: 10px;
+        top: -100px;
+        /* just hide it */
+    }
+
+    #delete-current-mindmap {
+        position: absolute;
+        right: 0px;
+        width: 50px;
+        background-color: var(--interface-button-background-danger);
+        color: var(--interface-button-foreground-danger);
+    }
+
+    .mindmap-title {
+        border: 0px;
+        background-color: transparent;
+        padding: 2px;
+        color: var(--c0);
+        width: calc(100% - 50px);
+    }
+
+    #add_mindmap_item {
+        width: 50px;
+    }
+
+    .mindmap-item>.notes{
+        padding:10px;
+    }
+</style>
+<div id="makescrolly">
+    <div id="mindmap_line"></div>
+    <div id="mindmap_items"></div>
+</div>
+
+<div id="mindmap_tools">
+    <div id="mindmap-hide-tools" style="display:none">
+        <button id="add_mindmap_item" class="btn btn-wavemaker" title="Add New Text Node"><i class="fa fa-fw fa-sticky-note"></i></button>
+        <button id="add_mindmap_image" class="btn btn-wavemaker" title="Add New Image Node"><i class="fa fa-fw fa-image"></i></button>
+        <button class="btn btn-wavemaker" id="delete-current-mindmap" title="Delete this Mindmap"><i class="fa fa-trash fa-fw"></i></button>
+    </div>
+</div>
+
+<div id="linktip">Choose a note to link to</div>
+
+
+
+<div style="position:absolute; top:-100px;" id="">
+    <input type="file" class="wm-image-upload-form" id="mindmapImageUpload" name="myfile" />
+</div>
