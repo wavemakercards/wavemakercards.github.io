@@ -1,7 +1,7 @@
 {
 "name": "Wavemaker",
 "short_name": "wavemaker",
-"start_url": "/",
+"start_url": "version3/",
 "display": "standalone",
 "theme_color": "#37474f",
 "background_color": "#37474f",
