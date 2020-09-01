@@ -1,0 +1,144 @@
+body {
+  background-color: #212121;
+  color: #fff;
+}
+
+.logo {
+  fill: #fff;
+}
+
+.addNewCard {
+  color: #fafafa;
+}
+#loadingScreen {
+  /*Just for Theming Colors*/
+  background-color: #212121;
+  color: #fff;
+}
+
+#EditorContainer {
+  background-color: #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#222222)"; /*IE 8*/
+  -moz-box-shadow: 0 0 20px -3px #222222; /*FF 3.5+*/
+  -webkit-box-shadow: 0 0 20px -3px #222222; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 0 20px -3px #222222; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#222222); /*IE 5.5-7*/
+}
+
+#navsystem {
+  background-color: #424242;
+}
+#CardModal {
+  color: #222222;
+}
+.content::-webkit-scrollbar {
+  background-color: #e8eaf6;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #303030;
+}
+
+.content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+#lhs_frame {
+  background-color: #212121;
+}
+
+#center_frame {
+  background-color: #757575;
+}
+
+#rhs_frame {
+  background-color: #212121;
+}
+#EditorContainer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.sectionTitle {
+  color: #212121;
+}
+
+.sectionText {
+  color: #424242;
+}
+
+.logo-top {
+  fill: #4d4d4d;
+}
+.logo-bottom {
+  fill: #eeeeee;
+}
+
+#saveAlert {
+  background-color: #ad1457;
+  color: #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#585858)"; /*IE 8*/
+  -moz-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*FF 3.5+*/
+  -webkit-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#585858); /*IE 5.5-7*/
+}
+
+#wordCount {
+  background-color: #e0e0e0;
+  color: #222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#585858)"; /*IE 8*/
+  -moz-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*FF 3.5+*/
+  -webkit-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#585858); /*IE 5.5-7*/
+}
+
+.navbtn {
+  background: #424242;
+  color: #fff;
+}
+.navbtn:hover {
+  background: #212121;
+  color: #fff;
+}
+
+.sideBtn {
+  background: #616161;
+  color: #fff;
+}
+.sideBtn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.sidebar-nav {
+}
+
+.sidebar-nav li {
+  color: #fefefe;
+}
+
+.sidebar-nav > li > i {
+}
+
+.sidebar-nav li:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+}
+
+.sidebar-nav > .sidebar-brand {
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
