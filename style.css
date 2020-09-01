@@ -27,3 +27,22 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
+
+.foot{
+  font-size: 0.7rem;
+  padding:10px;
+  text-align: left;
+}
+.foot>a{
+  color:#ccc;
+  width:100%;
+}
+.foot i{
+width:20px;
+  padding:5px;
+  border-radius: 5px;
+  margin-right:10px;
+  margin-bottom: 5px;;
+  color:#222;
+  background-color: #ccc;
+}
