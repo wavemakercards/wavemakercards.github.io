@@ -19,6 +19,29 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+
+    <script>
+      function isElectron() {
+  if (typeof require !== 'function') return false;
+  if (typeof window !== 'object') return false;
+  try {
+    const electron = require('electron');
+    if (typeof electron !== 'object') return false;
+  } catch(e) {
+    return false;
+  }
+  return true;
+}
+
+if(isElectron()){
+  var fs = require('fs');
+  console.log("Electron Baby")
+}else{
+  console.log("Not electron")
+}
+    </script>
+
 </body>
 
 </html>

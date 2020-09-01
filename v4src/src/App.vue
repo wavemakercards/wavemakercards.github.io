@@ -2,7 +2,6 @@
   <v-app id="app">
    <router-view/>
     <v-footer app>
-
     <v-row no-gutters>
       <v-col
         cols="4"
@@ -25,9 +24,7 @@
       
     </v-row>
 
-     
- 
-     
+   
     </v-footer>
   </v-app>
 </template>
