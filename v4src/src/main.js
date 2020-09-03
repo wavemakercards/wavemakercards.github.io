@@ -19,11 +19,29 @@ Vue.use(TiptapVuetifyPlugin, {
 window.App = new Vue({
     vuetify,
     router,
+    uuid,
     data: () => ({
+        writer : {
+            SelectedCard : null,
+            FileList : []
+        },
         system: {},
         db,
         uuid
     }),
+    methods : {
+        SaveManuscriptData(){
+            console.log("save triggered")
+            let MYstate = { id: 1, state: JSON.stringify(this.$root.writer), lastupdated: Date.now() }
+            this.$root.db.ManuscriptData.put(MYstate).then(function(updated) {
+                if (updated) {
+                    //Project Save done");
+                } else {
+                    //Project Failed Save");
+                }
+            });
+        }
+    },
 
     created() {
         this.$vuetify.theme.dark = true

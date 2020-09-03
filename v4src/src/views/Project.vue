@@ -1,14 +1,7 @@
 <template>
 <div>
-  <v-app-bar app dense clipped-left>
-    <img src="@/assets/wavemaker.svg" width="25"  />       
-               <v-spacer></v-spacer>
-
-      <v-btn icon @click="$router.push('/')">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-    </v-app-bar>
-    
+ 
+      <TopBar/>
     <SideMenu hilight="project" />
  
   <v-main  v-if="loaded">
@@ -71,9 +64,11 @@
 </style>
 
 <script>
+import TopBar from './tools/$$Shared/TopBar'
 import SideMenu from './tools/$$Shared/SideMenu'
 export default {
   components:{
+    TopBar,
     SideMenu
   },
   data() {

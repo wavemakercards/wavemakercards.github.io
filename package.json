@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "dexie": "^3.0.2"
+    "dexie": "^3.0.2",
+    "vue-uuid": "^2.0.2",
+    "vuedraggable": "^2.24.1",
+    "vue-file-tree": "github:robogeek/vue-file-tree"
   }
 }

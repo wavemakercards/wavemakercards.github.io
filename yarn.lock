@@ -2,7 +2,37 @@
 # yarn lockfile v1
 
 
+"@types/uuid@^8.0.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.0.tgz#215c231dff736d5ba92410e6d602050cce7e273f"
+  integrity sha512-eQ9qFW/fhfGJF8WKHGEHZEyVWfZxrT+6CLIJGBcZPfxUh/+BnEj+UCGYMlr9qZuX/2AltsvwrGqp0LhEW8D0zQ==
+
 dexie@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.0.2.tgz#4b979904d739e0530b68352005f175a82633a075"
   integrity sha512-go4FnIoAhcUiCdxutfIZRxnSaSyDgfEq+GH7N0I8nTCJbC2FmeBj+0FrETa3ln5ix+VQMOPsFeYHlgE/8SZWwQ==
+
+sortablejs@^1.10.1:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.10.2.tgz#6e40364d913f98b85a14f6678f92b5c1221f5290"
+  integrity sha512-YkPGufevysvfwn5rfdlGyrGjt7/CRHwvRPogD/lC+TnvcN29jDpCifKP+rBqf+LRldfXSTh+0CGLcSg0VIxq3A==
+
+uuid@^8.1.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
+  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
+
+vue-uuid@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/vue-uuid/-/vue-uuid-2.0.2.tgz#0cfb739e660a3af1d4e3342743578114f79b2438"
+  integrity sha512-PRf1CHg3uKi77bVRyAuW2u/T2PO9LxMr7cw9t9rNdpZTkNDyw1Fx6eJVL+8JOtM9VxxPkoZ/rwhXJ5l+X5AYzQ==
+  dependencies:
+    "@types/uuid" "^8.0.0"
+    uuid "^8.1.0"
+
+vuedraggable@^2.24.1:
+  version "2.24.1"
+  resolved "https://registry.yarnpkg.com/vuedraggable/-/vuedraggable-2.24.1.tgz#304abd7644dde05c1f199a227bf9e9107f56197a"
+  integrity sha512-G1fxO1oshx+WLdieSGl6jSJdlHOQFga1FpjuUpgXldbpKNzxpjsGn4xYNnRHVrOAqm8aG5FfpdQlh5LHesxCeA==
+  dependencies:
+    sortablejs "^1.10.1"
