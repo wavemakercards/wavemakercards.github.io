@@ -2,45 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-
-    <meta name="theme-color" content="#f00">
-    <title>WaveMaker</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <meta name="theme-color" content="#212121">
+  <title>WaveMaker</title>
 </head>
 
 <body>
-    <noscript>
-      <strong>We're sorry but WaveMaker doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+  <noscript>
+    <strong>We're sorry but WaveMaker doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
 
 
-    <script>
-      function isElectron() {
-  if (typeof require !== 'function') return false;
-  if (typeof window !== 'object') return false;
-  try {
-    const electron = require('electron');
-    if (typeof electron !== 'object') return false;
-  } catch(e) {
-    return false;
-  }
-  return true;
-}
-
-if(isElectron()){
-  var fs = require('fs');
-  console.log("Electron Baby")
-}else{
-  console.log("Not electron")
-}
-    </script>
+  <script src="wavemaker.js"></script>
 
 </body>
 

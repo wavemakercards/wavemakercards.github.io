@@ -18,12 +18,13 @@ Vue.use(TiptapVuetifyPlugin, {
 });
 window.App = new Vue({
     vuetify,
-    uuid,
-    db,
-    data: () => ({
-        file: null
-    }),
     router,
+    data: () => ({
+        system: {},
+        db,
+        uuid
+    }),
+
     created() {
         this.$vuetify.theme.dark = true
     },

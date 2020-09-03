@@ -8,5 +8,21 @@ module.exports = {
   },
   "transpileDependencies": [
     "vuetify"
-  ]
+  ],
+  /*
+  pluginOptions: {
+    electronBuilder: {
+      builderOptions: {
+        "fileAssociations": [
+          {
+            "ext": ".wm4",
+            "name": "Wavemaker File",
+            "role": "Editor",
+            "perMachine": true
+          }
+        ]
+      }
+    }
+  }
+  */
 }

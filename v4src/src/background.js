@@ -18,11 +18,15 @@ protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: tru
 function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
+        backgroundColor: '#212121',
         width: 800,
         height: 600,
+        fullscreenable :true,
+        //autoHideMenuBar :true,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        titleBarStyle: 'hidden'
     })
 
     if (process.env.WEBPACK_DEV_SERVER_URL) {
