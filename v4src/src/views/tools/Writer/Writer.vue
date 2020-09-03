@@ -3,9 +3,9 @@
 
 
     <v-navigation-drawer v-model="drawer" mobile-breakpoint="xs" clipped app class="slideDraw"  >
-      <v-list dense>
+     
           <ManuscriptTree  />
-      </v-list>
+  
     </v-navigation-drawer>
 
 

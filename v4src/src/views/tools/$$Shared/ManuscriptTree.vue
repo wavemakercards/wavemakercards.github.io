@@ -1,8 +1,9 @@
 <style scoped>
 .sticky {
   position: sticky;
-  top: 10px;
+  top: 0px;
   z-index: 999;
+  background-color: #212121;
 }
 </style>
 <template>
@@ -20,11 +21,12 @@
         </v-btn>
       </v-col>
     </v-row>
-
+ <v-list dense>
     <ManuscriptTreeItem
       :FileList="$root.writer.FileList"
       @input="ChangeDetected"
     />
+ </v-list>
   </div>
 </template>
 
@@ -71,7 +73,7 @@ export default {
         newObj.FileList = [];
       }
 
-      if (this.$root.writer.SelectedCard) {
+      if (this.$root.writer.SelectedCard.uuid) {
         if (this.$root.writer.SelectedCard.icon === "folder") {
           this.$root.writer.SelectedCard.open = true;
           this.$root.writer.SelectedCard.FileList.push(newObj);
