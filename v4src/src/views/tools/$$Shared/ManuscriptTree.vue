@@ -3,17 +3,17 @@
   position: sticky;
   top: 0px;
   z-index: 1;
-  background-color: #212121;
+  height:48px;
 }
 </style>
 <template>
   <div >
-    <v-row class="sticky">
+    <v-row class="sticky" >
       <v-col align="right">
-        <v-btn small text @click="AddManuscriptTreeItem('folder')">
+        <v-btn fab flat dark color="purple" class="mr-1" small  @click="AddManuscriptTreeItem('folder')">
           <v-icon>create_new_folder</v-icon>
         </v-btn>
-        <v-btn small text @click="AddManuscriptTreeItem('file')">
+        <v-btn fab small flat dark  color="purple" class="mr-1"  @click="AddManuscriptTreeItem('file')">
           <v-icon>note_add</v-icon>
         </v-btn>
       </v-col>

@@ -39,23 +39,34 @@ window.App = new Vue({
             let MYstate = { id: 1, state: statedata, lastupdated: Date.now() }
             this.$root.db.ManuscriptData.put(MYstate).then(function (updated) {
                 if (updated) {
-                    console.log("Manuscript Save done");
+                    window.wlog("database", "Manuscript Save done");
                 } else {
-                    console.log("Manuscript Failed Save");
+                    window.wlog("database", "Manuscript Save Failed");
                 }
             });
         },
-         SaveProjectData() {
+        SaveProjectData() {
             var statedata = JSON.stringify(this.$root.system.project)
             let MYstate = { id: 1, state: statedata, lastupdated: Date.now() }
-            this.$root.db.ProjectInfo.put(MYstate).then((updated)=> {
+            this.$root.db.ProjectInfo.put(MYstate).then((updated) => {
                 if (updated) {
-                 window.wlog("database", "Project Save done");
+                    window.wlog("database", "Project Save done");
                 } else {
-                  window.wlog("database", "Project Save Failed");
+                    window.wlog("database", "Project Save Failed");
                 }
             });
         },
+        SaveCardData(data) {
+            data.lastupdated = Date.now()
+            console.log("PUTTING" ,data)
+            this.$root.db.CardsDatabase.put(data).then(function (updated) {
+                if (updated) {
+                    window.wlog("database", "Card Updated");
+                } else {
+                    window.wlog("database", "Card FAILED");
+                }
+            });
+        }
 
     },
 
