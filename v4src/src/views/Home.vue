@@ -17,11 +17,11 @@
           <h1>Project Found</h1>
           <p>We have found a project database in use, do you want to use this project?</p>
 
-          <h2>{{ProjectInfo.title}}</h2>
+          <h2>{{$root.system.project.title}}</h2>
           <p>Last Updated : {{LastUpdated}}</p>
     
           <p class="text-center">
-            <v-btn color @click="$router.push('project')">Yes</v-btn>
+            <v-btn color @click="$router.push('project').catch(()=>{});">Yes</v-btn>
 &nbsp;
             <v-btn color @click="ClearDB()">No</v-btn>
           </p>
@@ -101,7 +101,6 @@
 export default {
   data() {
     return {
-      ProjectInfo: {},
       LastUpdated : null,
       viewsection: 1,
       newproject: false,
@@ -111,7 +110,7 @@ export default {
   },
   methods: {
     ClearDB() {
-      this.ProjectInfo= {};
+      this.$root.system= null;
       this.LastUpdated = null
       this.$root.db.delete().then(() => this.$root.db.open());
       window.wlog("Action :", "Cleared Database and remount Home.vue");
@@ -122,27 +121,16 @@ export default {
         this.newProjTitleError = true;
       } else {
         this.newProjTitleError = false;
-        this.ProjectInfo.title = this.newProjTitle;
-        this.SaveProjectData();
+        this.$root.system.project.title = this.newProjTitle;
+        this.$root.SaveProjectData();
+        this.$router.push('project').catch(()=>{});
       }
     },
-    SaveProjectData() {
-      let MYstate = {
-        id: 1,
-        state: JSON.stringify(this.ProjectInfo),
-        lastupdated: Date.now(),
-      };
-      this.$root.db.ProjectInfo.put(MYstate).then((updated) => {
-        if (updated) {
-          window.wlog("database", "Project Save done");
-          this.$router.push("project");
-        } else {
-          window.wlog("database", "Project Save Failed");
-        }
-      });
-    },
-    CheckForProject() {
-      window.wlog("Database :", "Check for Project");
+ 
+  },
+  beforeMount() {
+    window.wlog("Action :", "Mounted Home.vue");
+     window.wlog("Database :", "Check for Project");
       this.$root.db.ProjectInfo.get({
         id: 1,
       })
@@ -153,20 +141,15 @@ export default {
           if (data) {
             window.wlog("Database :", "Project Found");
             window.wlog("result :", data);
-            this.ProjectInfo = JSON.parse(data.state);
+            this.$root.system.project = JSON.parse(data.state);
             this.LastUpdated = Date(data.lastupdated).toLocaleString()
             this.viewsection = 2;
           } else {
-            this.ProjectInfo = {};
+            this.$root.system.project  = {};
             window.wlog("Database :", "No Project Found");
             this.viewsection = 3;
           }
         });
-    },
-  },
-  beforeMount() {
-    window.wlog("Action :", "Mounted Home.vue");
-    this.CheckForProject();
   },
 };
 </script>

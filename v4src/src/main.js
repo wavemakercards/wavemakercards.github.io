@@ -21,26 +21,42 @@ window.App = new Vue({
     router,
     uuid,
     data: () => ({
-        writer : {
-            SelectedCard : null,
-            FileList : []
+        system: {
+            project: null,
+            writer: {
+                SelectedCard: { uuid: null },
+                FileList: []
+            }
+
+
         },
-        system: {},
         db,
         uuid
     }),
-    methods : {
-        SaveManuscriptData(){
-            console.log("save triggered")
-            let MYstate = { id: 1, state: JSON.stringify(this.$root.writer), lastupdated: Date.now() }
-            this.$root.db.ManuscriptData.put(MYstate).then(function(updated) {
+    methods: {
+        SaveManuscriptData() {
+            var statedata = JSON.stringify(this.$root.system.writer)
+            let MYstate = { id: 1, state: statedata, lastupdated: Date.now() }
+            this.$root.db.ManuscriptData.put(MYstate).then(function (updated) {
                 if (updated) {
-                    //Project Save done");
+                    console.log("Manuscript Save done");
                 } else {
-                    //Project Failed Save");
+                    console.log("Manuscript Failed Save");
                 }
             });
-        }
+        },
+         SaveProjectData() {
+            var statedata = JSON.stringify(this.$root.system.project)
+            let MYstate = { id: 1, state: statedata, lastupdated: Date.now() }
+            this.$root.db.ProjectInfo.put(MYstate).then((updated)=> {
+                if (updated) {
+                 window.wlog("database", "Project Save done");
+                } else {
+                  window.wlog("database", "Project Save Failed");
+                }
+            });
+        },
+
     },
 
     created() {

@@ -1,8 +1,8 @@
 
 <template>
-       <v-navigation-drawer permanent mini-variant app clipped>
+       <v-navigation-drawer permanent mini-variant app clipped  style="z-index:5">
       <v-list dense>
-    <v-list-item v-for="(item,index) in menuitems" :key="index"  @click="$router.push('/'+item.text)" v-bind:class="{ purple: hilight ===item.text }">
+    <v-list-item v-for="(item,index) in menuitems" :key="index"  @click="$router.push('/'+item.text).catch(()=>{});" v-bind:class="{ purple: hilight ===item.text }">
             <v-icon>{{item.icon}}</v-icon>
         </v-list-item>
 

@@ -10,7 +10,7 @@
       <div v-if="!editProject">
         <v-row align="center">
           <v-col cols="12" >
-            <h2>{{ProjectInfo.title}}  <v-btn dark icon x-small  @click="editProject=true">
+            <h2>{{$root.system.project.title}}  <v-btn dark icon x-small  @click="editProject=true">
                <v-icon>mdi-pencil</v-icon>
               </v-btn></h2>
           </v-col>
@@ -31,17 +31,17 @@
             <v-text-field
               label="Project title"
               placeholder="Project title here"
-              v-model="ProjectInfo.title"
+              v-model="$root.system.project.title"
               style="font-size:1.2rem"
-              :blur="SaveProjectData()"
+              :blur="$root.SaveProjectData()"
             ></v-text-field>
 
             <v-text-field
               label="Author(s) name title"
               placeholder="A. N. Author"
-              v-model="ProjectInfo.author"
+              v-model="$root.system.project.author"
               style="font-size:1.2rem"
-                :blur="SaveProjectData()"
+                :blur="$root.SaveProjectData()"
             ></v-text-field>
 
             <v-btn fixed right  dark fab x-small  elevation="0" @click="editProject=false">
@@ -74,24 +74,13 @@ export default {
   data() {
     return {
       editProject: false,
-      ProjectInfo: {},
       loaded: false,
     };
   },
   methods: {
     init() {
       this.loaded = true;
-    },
-        SaveProjectData() {
-            let MYstate = { id: 1, state: JSON.stringify(this.ProjectInfo), lastupdated: Date.now() }
-            this.$root.db.ProjectInfo.put(MYstate).then((updated)=> {
-                if (updated) {
-                 window.wlog("database", "Project Save done");
-                } else {
-                  window.wlog("database", "Project Save Failed");
-                }
-            });
-        },
+    }
   },
   beforeMount() {
     // get the project info as we are doing this for the  whole system
@@ -106,7 +95,7 @@ export default {
         if (data) {
           window.wlog("Database :", "Project Found");
           window.wlog("result :", data.state);
-          this.ProjectInfo = JSON.parse(data.state);
+          this.$root.system.project = JSON.parse(data.state);
           this.init();
         } else {
           window.wlog("Database :", "No Project Found");

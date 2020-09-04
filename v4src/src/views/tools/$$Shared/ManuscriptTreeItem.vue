@@ -8,7 +8,7 @@
     @change="emitter"
   >
     <div :key="el.uuid" v-for="(el, index) in FileList">
-      <v-list-item  class="listitem" :class="{purple: (el.uuid === $root.writer.SelectedCard.uuid)}">
+      <v-list-item  class="listitem" :class="{purple: (el.uuid === $root.system.writer.SelectedCard.uuid)}">
         <v-list-item-action class="mr-2"   v-if="el.icon==='folder' && !el.open" @click="el.open= !el.open">
           <v-icon>folder</v-icon>
         </v-list-item-action>
@@ -63,6 +63,7 @@
 .listitem{
   margin-left:5px;
   border-radius: 10px 0px 0px 10px ;
+  cursor: pointer;
 }
 .ghost {
   opacity: 0.5;
@@ -81,7 +82,7 @@ export default {
     itemclick(el, index) {
       el.index = index;
       // set it in the root variable - not using vuex I think!
-      this.$root.writer.SelectedCard = el;
+      this.$root.system.writer.SelectedCard = el;
       this.$root.SaveManuscriptData();
     }
   },

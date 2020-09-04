@@ -2,17 +2,14 @@
 .sticky {
   position: sticky;
   top: 0px;
-  z-index: 999;
+  z-index: 1;
   background-color: #212121;
 }
 </style>
 <template>
-  <div>
+  <div >
     <v-row class="sticky">
       <v-col align="right">
-        <v-btn small text @click="db()">
-          <v-icon>code</v-icon>
-        </v-btn>
         <v-btn small text @click="AddManuscriptTreeItem('folder')">
           <v-icon>create_new_folder</v-icon>
         </v-btn>
@@ -23,7 +20,7 @@
     </v-row>
  <v-list dense>
     <ManuscriptTreeItem
-      :FileList="$root.writer.FileList"
+      :FileList="$root.system.writer.FileList"
       @input="ChangeDetected"
     />
  </v-list>
@@ -38,15 +35,12 @@ export default {
     ManuscriptTreeItem
   },
   methods: {
-    db(){
-      console.log(this.$root.writer)
-    },
     ChangeDetected() {
     this.$root.SaveManuscriptData()
     },
     FindNodeByID: function(uuid, parentObj) {
             let el = false
-            let arrtosearch = parentObj.elements
+            let arrtosearch = parentObj.FileList
             arrtosearch.some((element, index) => {
                 if (element.uuid === uuid) {
                     el = {}
@@ -73,19 +67,19 @@ export default {
         newObj.FileList = [];
       }
 
-      if (this.$root.writer.SelectedCard.uuid) {
-        if (this.$root.writer.SelectedCard.icon === "folder") {
-          this.$root.writer.SelectedCard.open = true;
-          this.$root.writer.SelectedCard.FileList.push(newObj);
+      if (this.$root.system.writer.SelectedCard.uuid) {
+        if (this.$root.system.writer.SelectedCard.icon === "folder") {
+          this.$root.system.writer.SelectedCard.open = true;
+          this.$root.system.writer.SelectedCard.FileList.push(newObj);
         } else {
           let pos = this.FindNodeByID(
-            this.$root.writer.SelectedCard.uuid,
-            this.$root.writer
+            this.$root.system.writer.SelectedCard.uuid,
+            this.$root.system.writer
           );
          pos.parentObj.FileList.splice(pos.index + 1, 0, newObj);
         }
       } else {
-        this.$root.writer.FileList.push(newObj);
+        this.$root.system.writer.FileList.push(newObj);
       }
       // item Added so SAVE the project Info
   this.$root.SaveManuscriptData();

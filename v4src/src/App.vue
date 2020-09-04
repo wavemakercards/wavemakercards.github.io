@@ -13,9 +13,21 @@
   </v-app>
 </template>
 
+<script>
+export default {
+  beforeMount(){
+    if(!this.$root.system.project){
+      this.$router.push("/").catch(()=>{});
+    }
+  }
+}
+</script>
+
+
 <style>
 #app{
   overflow: auto;
+  overflow-x: hidden ;
 }
 html {
   overflow-y: none;
