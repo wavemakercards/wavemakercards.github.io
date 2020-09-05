@@ -6,6 +6,8 @@
           <img src="@/assets/wavemaker.svg" width="30" style="display:block; margin:0 auto" />
           <h1>wavemaker cards</h1>
           <p>loading</p>
+          <p>If this goes on for a bit clear the local DB using this button</p>
+          <p>  <v-btn color @click="ClearDB()">No</v-btn></p>
         </div>
       </v-row>
     </v-container>
