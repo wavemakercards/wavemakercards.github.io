@@ -4,16 +4,17 @@
   top: 0px;
   z-index: 1;
   height:48px;
+  padding:0px;
 }
 </style>
 <template>
   <div >
-    <v-row class="sticky" >
-      <v-col align="right">
-        <v-btn fab flat dark color="purple" class="mr-1" small  @click="AddManuscriptTreeItem('folder')">
+    <v-row class="sticky pa-0"  >
+      <v-col align="right" class="pa-0 ma-1">
+        <v-btn fab  elevation="0"  dark color="purple" class="mr-3 pa-0" small  @click="AddManuscriptTreeItem('folder')">
           <v-icon>create_new_folder</v-icon>
         </v-btn>
-        <v-btn fab small flat dark  color="purple" class="mr-1"  @click="AddManuscriptTreeItem('file')">
+        <v-btn fab small  dark elevation="0"  color="purple" class="mr-3"  @click="AddManuscriptTreeItem('file')">
           <v-icon>note_add</v-icon>
         </v-btn>
       </v-col>

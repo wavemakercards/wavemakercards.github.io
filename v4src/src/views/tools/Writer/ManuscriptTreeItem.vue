@@ -21,11 +21,19 @@
           <v-icon>notes</v-icon>
         </v-list-item-action>
 
+
         <v-list-item-content @click="itemclick(el, index)">
-          <v-list-item-title v-if="el.title">{{el.title}}</v-list-item-title>
+
+           <v-list-item-title><ManuscriptNode :el="el" /></v-list-item-title>
+<!--
+          <v-list-item-title v-if="el.title!=''">{{el.title}}</v-list-item-title>
           <v-list-item-title v-if="el.title ===''">
-            <span class="gray">_____________</span>
+            <ManuscriptNode />
+            <span class="gray">
+            Arse  
+            </span>
           </v-list-item-title>
+          -->
         </v-list-item-content>
         <v-list-item-action v-if="el.hidden">
           <v-icon>check_box</v-icon>
@@ -72,6 +80,7 @@
 
 <script>
 import draggable from "vuedraggable";
+import ManuscriptNode from "./ManuscriptNode";
 export default {
   name: "ManuscriptTreeItem",
   methods: {
@@ -87,7 +96,8 @@ export default {
     }
   },
   components: {
-    draggable
+    draggable,
+    ManuscriptNode
   },
   data() {
     return {

@@ -24,10 +24,10 @@ export default {
           menuitems : [
               { text :'project', icon : "home"},
               { text :'writer', icon : "import_contacts"},
+              { text :'planningboard', icon : "view_comfy"},
               { text :'timeline', icon : "access_time"},
               { text :'snowflake', icon : "ac_unit"},
               { text :'database', icon : "layers"},
-              { text :'planningboard', icon : "view_comfy"},
               { text :'export', icon : "launch"},
               { text :'settings', icon : "settings"},
               { text :'cloud', icon : "backup"},

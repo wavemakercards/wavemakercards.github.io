@@ -1,11 +1,11 @@
 <template>
-  <div class="editor">
+  <div class="TextEditorPageHolder">
    
-    <div class="page" style="max-width:800px">
+    <div class="TextEditorPage" >
 
 
  
-      <v-card class="mx-auto"   tile flat   >
+      <v-card class="mx-auto"   tile text   >
  <v-card-text class="pt-2">
    <h5>Card Settings</h5>
     <v-text-field
@@ -18,10 +18,6 @@
     ></v-text-field>
  </v-card-text> 
       </v-card>
-
-
-
-
                 <tiptap-vuetify
               v-model="CardItem.body"
               :extensions="extensions"
@@ -35,15 +31,46 @@
   </div>
 </template>
 <style scoped>
-.editor {
+.TextEditorPageHolder {
   position: relative;
   display: block;
+    margin-top: 10px;
+  max-width: 800px;
+    margin: 0 auto;
 }
 
-.page {
-  position: relative;
+.TextEditorPage {
+  position: absolute;
+  top:0px;
+  bottom:0px;
   margin: 0 auto;
-  margin-top: 10px;
+    right:0px;
+  left:0px;
+}
+</style>
+
+<style >
+
+.tiptap-vuetify-editor__toolbar {
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  top: 45px;
+  z-index: 1;
+}
+.tiptap-vuetify-editor__content {
+  min-height: 300px;
+}
+
+.tiptap-vuetify-editor__content pre {
+  width: 100%;
+  margin: 0 auto;
+}
+.tiptap-vuetify-editor__content img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 </style>
 <script>
@@ -76,6 +103,10 @@ export default {
     myId: String,
   },
   computed: {
+    dbchange: function() { 
+      console.log("Change Detected", this.$root.dbchange )
+      return this.$root.dbchange 
+      },
     toolbarAttrs() {
       return this.$vuetify.theme.isDark
         ? { color: "dark", dark: true }

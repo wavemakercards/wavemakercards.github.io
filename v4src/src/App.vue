@@ -22,19 +22,22 @@ export default {
   }
 }
 </script>
-
-
 <style>
 #app{
   overflow: auto;
   overflow-x: hidden ;
+  /*
+  background: url("https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-size: cover;
+  */
+
 }
 html {
-  overflow-y: none;
-  overflow-x: auto;
+  overflow-y: hidden !important;
+  overflow-x: hidden;
 }
 body {
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: auto;
 }
 

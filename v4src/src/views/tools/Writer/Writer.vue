@@ -1,32 +1,15 @@
 <template>
-  <div style="padding-left:68px;">
+  <div class="minPad" :class="{'addPadd' : drawer }" >
+    
     <SideMenu hilight="writer" />
     <v-navigation-drawer v-model="drawer" mobile-breakpoint="xs" app class="slideDraw">
       <ManuscriptTree />
     </v-navigation-drawer>
 
     <v-navigation-drawer v-model="NotesPanel" app right>
-      <v-list dense>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-action>
-
-          <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-email</v-icon>
-          </v-list-item-action>
-
-          <v-list-item-content>
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+    
+    <NoteCards  :myId="$root.system.writer.SelectedCard.uuid"  :key="'Note'+$root.system.writer.SelectedCard.uuid" />
+       
     </v-navigation-drawer>
 
     <v-app-bar app dense clipped-left flat>
@@ -46,27 +29,34 @@
         v-if="$root.system.writer.SelectedCard.uuid && $root.system.writer.SelectedCard.icon === 'file' "
         :key="$root.system.writer.SelectedCard.uuid"
       />
+   <FolderEditor
+        :myId="$root.system.writer.SelectedCard.uuid"
+        v-if="$root.system.writer.SelectedCard.uuid && $root.system.writer.SelectedCard.icon === 'folder' "
+        :key="$root.system.writer.SelectedCard.uuid"
+      />
 
-      <h1
-        v-if="$root.system.writer.SelectedCard.uuid && $root.system.writer.SelectedCard.icon != 'file' "
-      >This is a Folder</h1>
     </v-main>
   </div>
 </template>
 <script>
 import SideMenu from "./../../tools/$$Shared/SideMenu";
-import ManuscriptTree from "./../$$Shared/ManuscriptTree";
 import TextEditor from "./../$$Shared/TextEditor";
+import NoteCards from "./NoteCards";
+import FolderEditor from "./FolderEditor";
+import ManuscriptTree from "./ManuscriptTree";
 
 export default {
-  components: {
+
+ components: {
     ManuscriptTree,
     TextEditor,
+    FolderEditor,
     SideMenu,
+    NoteCards
   },
   data: () => ({
     drawer: null,
-    NotesPanel: null,
+    NotesPanel: null
   }),
   beforeMount() {
     this.$root.db.ManuscriptData.get({
@@ -90,9 +80,13 @@ export default {
 </script>
 
 <style scoped>
-@media only screen and (min-width: 600px) {
   .slideDraw {
     margin-left: 57px;
   }
+  .addPadd{
+   padding-left:68px;
+   }
+.minPad{
+  margin-left:48px;
 }
 </style>

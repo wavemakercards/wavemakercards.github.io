@@ -21,14 +21,17 @@ window.App = new Vue({
     router,
     uuid,
     data: () => ({
+        WaveMaker :  {
+            ProjectInfo : {},
+            ManuscriptData: {},
+            CardsDatabase : {}
+        },
         system: {
             project: null,
             writer: {
                 SelectedCard: { uuid: null },
                 FileList: []
             }
-
-
         },
         db,
         uuid
@@ -69,9 +72,28 @@ window.App = new Vue({
         }
 
     },
-
     created() {
         this.$vuetify.theme.dark = true
+
+        this.$root.db.on("changes", (changes)=>{
+            changes.forEach((change)=> {
+                console.log("EMIT" ,change)
+              switch (change.type) {
+                  case 1: // CREATED
+                    console.log('An object was created: ' + JSON.stringify(change.obj));
+                    break;
+                  case 2: // UPDATED
+                    console.log('An object with key ' + change.key + ' was updated with modifications: ' + JSON.stringify(change.mods));
+                    break;
+                  case 3: // DELETED
+                    console.log('An object was deleted: ' + JSON.stringify(change.oldObj));
+                    break;
+                }
+              
+            })
+        })
+
+
     },
     render: h => h(App)
 }).$mount('#app')

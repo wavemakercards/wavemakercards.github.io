@@ -1,4 +1,5 @@
 import Dexie from 'dexie';
+import 'dexie-observable';
 
 const db = new Dexie('wm4');
 db.version(1).stores({
@@ -14,5 +15,7 @@ db.version(1).stores({
     Mindmaps: `uuid,title,data,lastupdated`,
     */
 });
-
+/* 
+The observable elements are set up in main.js
+*/
 export default db;
