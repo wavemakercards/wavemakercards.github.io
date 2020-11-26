@@ -247,9 +247,7 @@ var CURRENT_FILE_OBJ
 
 function GoogleQuickSignIn(){
   console.log("Attempting Quick Google drive login")
-    if(!gapi.load('client:auth2', GoogleQuickSignIn2)){
-      alert("shit")
-    };
+  gapi.load('client:auth2', GoogleQuickSignIn2)
 }
 
 function GoogleQuickSignIn2(){
@@ -268,13 +266,13 @@ function GoogleQuickSignIn3(){
 swal("Connection Done", "You will need to click the button to trigger an upload.", "success");
 }
 function GoogleDrivehandleClientLoad() {
- 
   $("#showGoogle").hide();
   $("#GoogleError").show();
   gapi.load('client:auth2', GoogleDriveInit);
 }
 
 function GoogleDriveInit() {
+  console.log("initialising Google Drive")
   gapi.client.init({
     apiKey: API_KEY,
     clientId: CLIENT_ID,
@@ -301,24 +299,6 @@ function GoogleDriveInit() {
 function GoogleSigninStatus(isSignedIn) {
   console.log("GoogleSigninStatus", isSignedIn)
   if (isSignedIn) {
-   
-       swal({
-      title: "Turn On Auto Sync?",
-      html: "Auto Sync will upload to google drive automatically every five minutes. You will be asked this before each session. To disable it simply restart the app. <BR> (or reload the page)<BR><BR><a href='https://wavemaker.co.uk/blog/to-auto-sync-or-not-to-auto-sync/' class='btn  btn-xs' target='_blank'>How to use Auto-Sync</a>" ,
-      type: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes Please.",
-      cancelButtonText: "No Thanks."
-    }).then(result => {
-      if (result.value) {
-        DoAutoSave=true
-       // swal("Auto Sync Turned on!", "Coolio", "success");
-      }
-    });
-
-
     //  console.log("Signed In")
     $('#authorize-button').hide();
     $('#signout-button').show();
