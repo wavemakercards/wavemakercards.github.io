@@ -118,8 +118,28 @@
           });
         });
       });
+ 
+      var AutoSave;
+      var DoAutoSave = false;
+      var ShowUploadFeedback=true
+
+  AutoSave = setInterval(alertFunc, 300000); // 5 mins
 
 
+
+function alertFunc() {
+  
+  if(DoAutoSave){
+    console.log("Autosave Triggered!");
+    ShowUploadFeedback=false;
+    if(IsGoogleDrive){
+  exportDatabase("gDriveSyncUp", false);
+  }else{
+   alert("Your Google drive account appears to not be logged in - autosave will fail - return to the main menu and make sure your connection is there. Or turn OFF autosave by reloading this page and choosing not to turn on auto sync")
+  }
+}
+
+}
 
     </script>
 

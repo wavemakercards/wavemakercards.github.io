@@ -82,6 +82,10 @@ function exportDatabase(mode, showfeedback = false) {
       case "gDriveSave":
           console.log("Saving Data to Google Drive");
         GDriveWrite(JSON.stringify(exportData))
+        break;
+        case "gDriveSyncUp":
+          console.log("Saving Data to Google Drive");
+        GDriveWrite(JSON.stringify(exportData))
 
         break;
       default:
@@ -243,7 +247,9 @@ var CURRENT_FILE_OBJ
 
 function GoogleQuickSignIn(){
   console.log("Attempting Quick Google drive login")
-    gapi.load('client:auth2', GoogleQuickSignIn2);
+    if(!gapi.load('client:auth2', GoogleQuickSignIn2)){
+      alert("shit")
+    };
 }
 
 function GoogleQuickSignIn2(){
@@ -295,6 +301,24 @@ function GoogleDriveInit() {
 function GoogleSigninStatus(isSignedIn) {
   console.log("GoogleSigninStatus", isSignedIn)
   if (isSignedIn) {
+   
+       swal({
+      title: "Turn On Auto Sync?",
+      html: "Auto Sync will upload to google drive automatically every five minutes. You will be asked this before each session. To disable it simply restart the app. <BR> (or reload the page)<BR><BR><a href='https://wavemaker.co.uk/blog/to-auto-sync-or-not-to-auto-sync/' class='btn  btn-xs' target='_blank'>How to use Auto-Sync</a>" ,
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes Please.",
+      cancelButtonText: "No Thanks."
+    }).then(result => {
+      if (result.value) {
+        DoAutoSave=true
+       // swal("Auto Sync Turned on!", "Coolio", "success");
+      }
+    });
+
+
     //  console.log("Signed In")
     $('#authorize-button').hide();
     $('#signout-button').show();
@@ -302,6 +326,7 @@ function GoogleSigninStatus(isSignedIn) {
     IsGoogleDrive = true;
     GDriveFileGet();
   } else {
+    DoAutoSave=false
     //  console.log("Signed Out")
     $('#authorize-button').show();
     $('#signout-button').hide();
@@ -396,12 +421,15 @@ function GDriveWrite(FILEDATA, callback) {
       } else {
         console.log("Data Created on GDrive");
       }
-        if($("#SyncUpGdrive").length){
+  if(ShowUploadFeedback){
+    if($("#SyncUpGdrive").length){
       $("#SyncUpGdrive").html('<i class="fa fa-fw fa-cloud-upload"></i>')
     }else{
       $("#synchmsg").html("")
       swal("Uploaded!", "That has been Uploaded.", "success");
     }
+  }
+  ShowUploadFeedback=true;
       CURRENT_FILE_OBJ = file;
     };
   }
