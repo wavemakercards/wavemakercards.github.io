@@ -4,28 +4,34 @@ import { register } from 'register-service-worker'
 
 if (process.env.NODE_ENV === 'production' && !process.env.IS_ELECTRON) {  // disable for Electron version  : see :https://github.com/nklayman/vue-cli-plugin-electron-builder/issues/659
   register(`${process.env.BASE_URL}service-worker.js`, {
-    ready () {
+    ready() {
       console.log(
+
         'App is being served from cache by a service worker.\n' +
         'For more details, visit https://goo.gl/AFskqB'
       )
     },
-    registered () {
+    registered() {
       console.log('Service worker has been registered.')
+      alert('Service worker has been registered.')
     },
-    cached () {
+    cached() {
       console.log('Content has been cached for offline use.')
+      alert('Content has been cached for offline use.')
     },
-    updatefound () {
+    updatefound() {
       console.log('New content is downloading.')
+      alert('New content is downloading.')
     },
-    updated () {
+    updated() {
       console.log('New content is available; please refresh.')
+      alert('New content is available; please refresh.')
     },
-    offline () {
+    offline() {
       console.log('No internet connection found. App is running in offline mode.')
+      alert('No internet connection found. App is running in offline mode.')
     },
-    error (error) {
+    error(error) {
       console.error('Error during service worker registration:', error)
     }
   })
