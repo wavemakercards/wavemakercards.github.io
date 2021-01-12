@@ -4,8 +4,8 @@ const path = require("path");
 module.exports = {
   outputDir: path.resolve(__dirname, "../v4"),
   publicPath: process.env.NODE_ENV === 'production'
-    ? './v4/'
-    : './',
+    ? './'
+    : './v4/',
   "devServer": {
     "public": "localhost:8080"
   },
