@@ -1,7 +1,7 @@
 <template>
   <div>
 
-      <v-app-bar dense class="sticky" color="c9"     elevation="0">
+      <v-app-bar dense class="sticky" color="c9"   elevation="0">
 
  <v-spacer></v-spacer>
           <v-btn icon  @click="addNote($root.writer.activenode)" >

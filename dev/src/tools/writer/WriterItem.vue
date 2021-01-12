@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app clipped :width="380">
+    <v-navigation-drawer v-model="drawer" app clipped :width="340">
       <Manuscript
         :list="
           $root.shadowDB.Writer[$route.params.id]
@@ -8,7 +8,7 @@
       />
     </v-navigation-drawer>
 
-      <v-navigation-drawer v-model="notedrawer" app right clipped :width="380" v-if="$root.writer.activenode.type === 'file'">
+      <v-navigation-drawer v-model="notedrawer" app right clipped :width="340" v-if="$root.writer.activenode.type === 'file'">
      <NotesPanel />
     </v-navigation-drawer>
 
