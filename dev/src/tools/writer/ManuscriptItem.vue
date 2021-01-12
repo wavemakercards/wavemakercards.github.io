@@ -23,8 +23,8 @@
         </v-list-item-content>
 
         <v-list-item-content v-if="el.type==='file'">
-          <v-list-item-title v-if="$root.shadowDB.Cards[el.uuid]">
-          <span v-if="$root.shadowDB.Cards[el.uuid].title!=''"> {{ $root.shadowDB.Cards[el.uuid].title }}</span>
+          <v-list-item-title v-if="$root.shadowDB.ManuscriptCards[el.uuid]">
+          <span v-if="$root.shadowDB.ManuscriptCards[el.uuid].title!=''"> {{ $root.shadowDB.ManuscriptCards[el.uuid].title }}</span>
          <em v-else style="opacity:30%">New Card</em>
           </v-list-item-title>
           <v-list-item-title v-else><em  style="opacity:30%">New Card</em></v-list-item-title>
@@ -67,8 +67,8 @@ toggleOpenFolder(el){
 
     MakeCurrentNode(el) {
       if (this.$root.writer.activenode === el) {
-        //toggle it off
-        this.$root.writer.activenode = {};
+        //toggle it off // NO shit behaviour with the mone node added
+       // this.$root.writer.activenode = {};
       } else {
         this.$root.writer.activenode = el;
       }

@@ -47,8 +47,6 @@ export default {
             obj.title =""
             obj.content=""
             this.$root.AddRecord("Cards", obj);
-        }else{
-            console.log("huh",this.$root.shadowDB.Cards[this.uuid])
         }
         
     }

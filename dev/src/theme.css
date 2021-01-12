@@ -83,9 +83,7 @@ Setting General Interface Variables
     --sub-list-fg: var(--c0);
     --sub-list-bg: var(--c7);
 }
-.miniBarInsert{
-    margin-left: 58px;
-}
+
 .logo-top{
     fill : var(--logo-top);
 }

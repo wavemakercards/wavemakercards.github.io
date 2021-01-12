@@ -40,7 +40,7 @@
                 <v-list-item-title><v-icon>{{item.icon}}</v-icon></v-list-item-title>
               </v-list-item>
                 </template>
- <span>{{item.text}}</span>
+ <span>{{item.tooltip}}</span>
     </v-tooltip>
 
 
@@ -51,7 +51,7 @@
                 <v-list-item-title><v-icon>flare</v-icon></v-list-item-title>
               </v-list-item>
       </template>
-      <span>Dark/light mode</span>
+      <span>Dark / Light mode</span>
     </v-tooltip>
 
 
@@ -157,17 +157,19 @@ export default {
   data(){
       return{
           menuitems : [
-              { text :'project', icon : "home"},
-              { text :'writer', icon : "import_contacts"},
-              { text :'timeline', icon : "access_time"},
-              { text :'snowflake', icon : "ac_unit"},
-              { text :'database', icon : "layers"},
+              { text :'', icon : "whatshot", tooltip : "Welcome"},
+              { text :'project', icon : "home" , tooltip : "Project Home"},
+              { text :'writer', icon : "import_contacts" , tooltip : "Writing Tool"},
+              { text :'timeline', icon : "access_time" , tooltip : "Timeline Tool"},
+              { text :'snowflake', icon : "ac_unit" , tooltip : "Snowflake Tool"},
+
               {
-                 text :'gridplanner', icon : "view_comfy"},
-                 { text :'mindmap', icon : "schema"},
-              { text :'exportoptions', icon : "launch"},
-              { text :'settings', icon : "settings"},
-           //   { text :'cloud', icon : "backup"},
+                 text :'gridplanner', icon : "view_comfy" , tooltip : "Grid Planner Tool"},
+                 { text :'mindmap', icon : "schema" , tooltip : "Mindmap Tool"},
+              { text :'exportoptions', icon : "launch" , tooltip : "Export Options"},
+                            { text :'database', icon : "layers" , tooltip : "Cards Database"},
+              { text :'settings', icon : "settings" , tooltip : "Settings"},
+           //   { text :'cloud', icon : "backup" , tooltip : ""},
           ]
       }
   }  

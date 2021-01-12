@@ -5,8 +5,6 @@
       <v-container>
   <v-row no-gutters class="mt-4" justify="center">
    <v-col
-        v-for="(mindmap, index) in $root.shadowDB.Mindmap"
-        :key="index"
         cols="12"  sm="6" 
       >
   <v-card
@@ -30,7 +28,7 @@
     </v-app>
     <v-app v-if="$root.dbloaded">
       <MainNavigation v-if="$root.interface.MainNavigationToggle" />
-    
+  
         <router-view></router-view>
 
     </v-app>

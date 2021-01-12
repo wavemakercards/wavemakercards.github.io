@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.cc0abb37046d77f421abe107c60b22a0.js"
+  "precache-manifest.203d0df460e729e1b96e3b7617df2b01.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "wavemaker"});

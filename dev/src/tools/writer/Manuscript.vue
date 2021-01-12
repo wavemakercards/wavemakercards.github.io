@@ -9,6 +9,21 @@
       >
     </v-app-bar>
     <v-list dense>
+
+
+ <v-list-item link  :class="{ accent : (!$root.writer.activenode.uuid )}"  @click="selectHome()">
+      <v-list-item-action >
+          <v-icon >home</v-icon> 
+        </v-list-item-action>
+
+        <v-list-item-content  >
+          <v-list-item-title v-if="$root.shadowDB.Writer[$route.params.id].title" >{{$root.shadowDB.Writer[$route.params.id].title }}</v-list-item-title>
+            <v-list-item-title v-else ><em style="opacity:30%">Manuscript Title</em></v-list-item-title>
+        </v-list-item-content>
+
+      </v-list-item>
+
+
       <ManuscriptItem
         :list="
           $root.shadowDB.Writer[$route.params.id]
@@ -28,6 +43,9 @@ export default {
     drawer: true,
   }),
   methods: {
+    selectHome(){
+      this.$root.writer.activenode ={}
+    },
     addFolder() {
       let obj = {
         type: "folder",

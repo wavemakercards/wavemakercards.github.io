@@ -32,10 +32,13 @@
           <div v-if="$root.writer.activenode.type === 'file'">
             <v-row justify="center">
               <v-col cols="10" md="10" lg="8">
-                <text-editor
+       
+                 <manuscript-editor
                   :uuid="$root.writer.activenode.uuid"
                   :key="$root.writer.activenode.uuid"
-                /> </v-col
+                />
+                
+                 </v-col
             ></v-row>
           </div>
           <div v-else>
@@ -82,7 +85,8 @@
 <script>
 import Manuscript from "./Manuscript";
 import NotesPanel from "./NotesPanel";
-import TextEditor from "../generic/TextEditor.vue";
+
+import ManuscriptEditor from "../generic/ManuscriptEditor.vue";
 import TextViewer from "../generic/TextViewer.vue";
 export default {
   data() {
@@ -94,8 +98,8 @@ export default {
   components: {
     Manuscript,
     NotesPanel,
-    TextEditor,
     TextViewer,
+    ManuscriptEditor
   },
   methods: {
     SaveChange() {

@@ -5,7 +5,16 @@ import router from './router'
 import db from "./DexieDB";
 import { uuid } from 'vue-uuid';
 import vuetify from './plugins/vuetify';
+import { TiptapVuetifyPlugin } from 'tiptap-vuetify'
+// don't forget to import CSS styles
+import 'tiptap-vuetify/dist/main.css'
+// Vuetify's CSS styles 
+import 'vuetify/dist/vuetify.min.css'
 Vue.config.productionTip = false
+
+Vue.use(TiptapVuetifyPlugin, {
+  vuetify
+});
 
 new Vue({
   uuid,
