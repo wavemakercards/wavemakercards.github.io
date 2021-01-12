@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = {
   outputDir: path.resolve(__dirname, "../v4"),
-  "publicPath": "./",
+  "publicPath": "./v4/",
   "devServer": {
     "public": "localhost:8080"
   },
