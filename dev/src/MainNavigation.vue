@@ -58,7 +58,7 @@
 
             </v-list>
           </v-menu>
-           <v-toolbar-title>Wavemaker</v-toolbar-title>
+           <v-toolbar-title>Wavemaker <span class="logo-text-4">4</span></v-toolbar-title>
 
 <!--
       <v-btn icon link  @click="$router.push('/')" >   

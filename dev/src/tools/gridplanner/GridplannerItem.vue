@@ -140,7 +140,7 @@
                         <div class="boxhandle">
                           <v-icon>drag_handle</v-icon>
                         </div>
-                        <TextEditor :uuid="card" />
+                        <CardEditor :uuid="card" />
                       </v-card-text>
                     </v-card>
                   </transition-group>
@@ -166,10 +166,10 @@
 
 <script>
 import draggable from "vuedraggable";
-import TextEditor from "@/tools/generic/TextEditor.vue";
+import CardEditor from "@/tools/generic/CardEditor.vue";
 export default {
   components: {
-    TextEditor,
+    CardEditor,
     draggable,
   },
   computed: {

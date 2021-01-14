@@ -5,28 +5,28 @@
 </v-alert>
 <div
  v-if="$root.shadowDB.ManuscriptCards[this.uuid]"  >
-    
+    <v-btn fab small absolute right  @click="showSrc=!showSrc"><v-icon>settings</v-icon></v-btn>
    <v-text-field
           label="Title"
           v-model="$root.shadowDB.ManuscriptCards[uuid].title"
           @keyup="SaveChange()"
         ></v-text-field>
-
-
              <tiptap-vuetify
+                 v-if="!showSrc"
       v-model="$root.shadowDB.ManuscriptCards[uuid].content"
       :extensions="extensions"
       :toolbar-attributes="toolbarAttrs"
          @blur="SaveChange()"
     />
-        <!--
+        
     <v-textarea
+    v-if="showSrc"
      auto-grow
      filled
      v-model="$root.shadowDB.ManuscriptCards[uuid].content"
      @change="SaveChange()"
     ></v-textarea>
-    -->
+
          
 </div >
 </div>
@@ -66,6 +66,7 @@ export default {
   },
     components: { TiptapVuetify },
      data: () => ({
+       showSrc : false,
     // declare extensions you want to use
     oldextensions: [
         History,

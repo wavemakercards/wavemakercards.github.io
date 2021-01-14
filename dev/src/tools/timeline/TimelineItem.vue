@@ -17,7 +17,6 @@
       </v-col>
     </v-row>
 
-
     <section id="cd-timeline" class="cd-container">
       <draggable v-model="$root.shadowDB.Timeline[$route.params.id].content"   @change="SaveChange()">
         <transition-group type="transition" :name="'flip-list'">
@@ -55,10 +54,9 @@
                 alt="delete this card"
                 title="delete this card"
               ><v-icon>delete</v-icon></v-btn>
-
 </div>
 <v-card-text>
-          <TextEditor :uuid="card.uuid" />
+          <CardEditor :uuid="card.uuid" />
     </v-card-text>
 
         </v-card>
@@ -83,10 +81,10 @@
 
 <script>
 import draggable from "vuedraggable";
-import TextEditor from "@/tools/generic/TextEditor.vue";
+import CardEditor from "@/tools/generic/CardEditor.vue";
 export default {
   components:{
-    TextEditor,
+    CardEditor,
     draggable
   },
   methods: {

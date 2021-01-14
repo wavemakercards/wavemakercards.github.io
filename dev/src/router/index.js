@@ -115,7 +115,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+ // mode: 'history',  // using hash mode for dev comment this out
   base: process.env.BASE_URL,
   routes
 })

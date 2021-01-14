@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
 
-
+/* this should prevent the pull down refresh from happening*/
+body {
+    overscroll-behavior-y: contain;
+}
 :root {
     --c0: #EDE7F6;
     --c1: #D1C4E9;
@@ -84,11 +88,17 @@ Setting General Interface Variables
     --sub-list-bg: var(--c7);
 }
 
+
 .logo-top{
     fill : var(--logo-top);
 }
 .logo-bottom{
     fill : var(--logo-bottom);
+}
+
+.logo-text-4{
+    font-family: 'Molle', cursive;
+    font-size: 2rem;
 }
 
 html{

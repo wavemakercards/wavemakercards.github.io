@@ -1,55 +1,43 @@
 <template>
   <div>
-
-      <v-app-bar dense class="sticky" color="c9"   elevation="0">
-
- <v-spacer></v-spacer>
-          <v-btn icon  @click="addNote($root.writer.activenode)" >
-          <v-icon >add_comment</v-icon>
-        </v-btn>
+    <v-app-bar dense class="sticky" color="c9" elevation="0">
+      <v-spacer></v-spacer>
+      <v-btn icon @click="addNote($root.writer.activenode)">
+        <v-icon>add_comment</v-icon>
+      </v-btn>
     </v-app-bar>
 
- <draggable
-                  v-model="$root.writer.activenode.notes"
-                  handle=".boxhandle"
-                  group="boxes"
-                  @change="SaveChange"
-                >
-                  <transition-group
-                    type="transition"
-                    name="flip-list"
-                    class=""
-                    tag="div"
-                  >
-
-
-          <v-card
-                      class="ma-4 pa-2"
-                      v-for="(card, cardIndex) in $root.writer.activenode.notes"
-                      :key="cardIndex"
-                    >
-                  
-                        <div class="boxhandle">
-                          <v-icon>drag_handle</v-icon>
-                        </div>
-                        <TextEditor :uuid="card.uuid" />
-                   
-                    </v-card>
-        </transition-group>
-                </draggable>
-
+    <draggable
+      v-model="$root.writer.activenode.notes"
+      handle=".boxhandle"
+      group="boxes"
+      @change="SaveChange"
+    >
+      <transition-group type="transition" name="flip-list" class="" tag="div">
+        <v-card
+          class="ma-4 pa-2"
+          v-for="(card, cardIndex) in $root.writer.activenode.notes"
+          :key="cardIndex"
+        >
+          <div class="boxhandle">
+            <v-icon>drag_handle</v-icon>
+          </div>
+          <CardEditor :uuid="card.uuid" editmode="inline" />
+        </v-card>
+      </transition-group>
+    </draggable>
   </div>
 </template>
 <script>
 import draggable from "vuedraggable";
-import TextEditor from "@/tools/generic/TextEditor.vue";
+import CardEditor from "@/tools/generic/CardEditor.vue";
 export default {
-    components :{
-        TextEditor,
-            draggable,
-    },
+  components: {
+    CardEditor,
+    draggable,
+  },
   methods: {
-          addNote(o) {
+    addNote(o) {
       console.log(o);
       let obj = {
         uuid: this.$root.uuid.v4(),
@@ -80,7 +68,6 @@ export default {
   position: sticky;
   top: 0px;
   z-index: 2;
-
 }
 
 .boxhandle {

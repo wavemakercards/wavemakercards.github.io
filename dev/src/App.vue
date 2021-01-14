@@ -27,6 +27,12 @@
       </v-container>
     </v-app>
     <v-app v-if="$root.dbloaded">
+      <v-snackbar bottom right :value="updateExists" :timeout="0" color="primary">
+  An update is available
+  <v-btn text @click="refreshApp">
+    Update
+  </v-btn>
+</v-snackbar>
       <MainNavigation v-if="$root.interface.MainNavigationToggle" />
   
         <router-view></router-view>
@@ -52,12 +58,32 @@ export default {
         console.log("ShadowDB : ", this.$root.shadowDB);
       }
     },
+     updateAvailable(event) {
+      this.registration = event.detail
+      this.updateExists = true
+    },
+    refreshApp() {
+  this.updateExists = false
+  // Make sure we only send a 'skip waiting' message if the SW is waiting
+  if (!this.registration || !this.registration.waiting) return
+  // Send message to SW to skip the waiting and activate the new SW
+  this.registration.waiting.postMessage({ type: 'SKIP_WAITING' })
+}
   },
   mounted() {
     window.addEventListener("keydown", this.trigger);
   },
   destroyed() {
     window.removeEventListener("keydown", this.trigger);
+  },
+   data() {
+    return {
+      registration: null,
+      updateExists: true,
+    }
+  },
+  created() {
+    document.addEventListener('swUpdated', this.updateAvailable, { once: true })
   },
 };
 </script>

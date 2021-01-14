@@ -43,7 +43,7 @@
               {{item.uuid}} - {{colindex}}
            <!--
 
-                <TextEditor
+                <CardEditor
               :uuid="item.uuid"
               :listIndex="index"
               :colIndex="colindex"
@@ -72,10 +72,10 @@
 
 <script>
 import draggable from "vuedraggable";
-//import TextEditor from "@/tools/generic/TextEditor.vue";
+//import CardEditor from "@/tools/generic/CardEditor.vue";
 export default {
   components:{
-  //  TextEditor,
+  //  CardEditor,
     draggable
   },
   methods: {
