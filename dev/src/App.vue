@@ -60,7 +60,7 @@ export default {
     },
      updateAvailable(event) {
       this.registration = event.detail
-      this.updateExists = true
+      this.updateExists = false
     },
     refreshApp() {
   this.updateExists = false

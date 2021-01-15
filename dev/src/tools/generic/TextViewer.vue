@@ -5,10 +5,10 @@
       <div v-if="el.type!='folder'">
       <v-card elevation="2" tile>
 
-<div v-if="$root.shadowDB.Cards[el.uuid]">
+<div v-if="$root.shadowDB.ManuscriptCards[el.uuid]">
 
         <v-card-subtitle>
-         <v-icon class="pr-4">notes</v-icon> {{ $root.shadowDB.Cards[el.uuid].title }}
+         <v-icon class="pr-4">notes</v-icon> {{ $root.shadowDB.ManuscriptCards[el.uuid].title }}
           <v-btn
         
         @click="$root.writer.activenode=el"
@@ -22,8 +22,8 @@
        <v-icon>edit</v-icon> 
       </v-btn>
         </v-card-subtitle>
-        <v-card-text>
-          {{ $root.shadowDB.Cards[el.uuid].content }}
+        <v-card-text v-html="$root.shadowDB.ManuscriptCards[el.uuid].content">
+   
         </v-card-text>
 
         </div>

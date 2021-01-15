@@ -155,3 +155,63 @@ h1,h2,h3,h4,h5,h6 {
   background-size: cover !important;
   */
 }
+
+
+/*
+  Manuscript editor CSS
+*/
+
+.manuscripteditor img{
+    max-width:100%;
+  }
+  
+  .manuscripteditor .tiptap-vuetify-editor__toolbar{
+    position: sticky;
+    z-index: 5;
+    top:112px;
+  }
+
+
+  /*
+  Card Fullscreen editor CSS
+  */
+  .cardeditor_fullscreen{
+      max-width:900px;
+      margin:0 auto;
+  }
+  .cardeditor_fullscreen .tiptap-vuetify-editor__toolbar{
+    position: sticky;
+    z-index: 5;
+    top:0px;
+  }
+  .cardeditor_fullscreen img{
+    max-width:100%;
+  }
+  
+
+    /*
+  Card Inline editor CSS
+  */
+  .cardeditor_inline{
+    max-width:900px;
+    margin:0 auto;
+}
+.cardeditor_inline .tiptap-vuetify-editor__toolbar{
+  position: sticky;
+  z-index: 5;
+  top:0px;
+}
+.cardeditor_inline img{
+  max-width:100%;
+}
+
+    /*
+  Card Display  CSS
+  */
+.card_display{
+    max-height:300px; 
+    overflow-y:auto
+}
+  .card_display img{
+    max-width:100%;
+  }

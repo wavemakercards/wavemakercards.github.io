@@ -22,7 +22,7 @@
           <div class="boxhandle">
             <v-icon>drag_handle</v-icon>
           </div>
-          <CardEditor :uuid="card.uuid" editmode="inline" />
+          <CardEditor :uuid="card.uuid" />
         </v-card>
       </transition-group>
     </draggable>

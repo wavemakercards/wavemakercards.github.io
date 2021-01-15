@@ -36,6 +36,94 @@
     </v-btn>
       </div>
 
+  <v-dialog
+      v-model="showModal1"
+      width="500"
+    >
+ <v-card>
+     <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            icon
+            @click="showModal1 = false"
+          >
+            <v-icon>close</v-icon> 
+          </v-btn>
+        </v-card-actions>
+        <v-card-title >
+         Add New Card
+        </v-card-title>
+
+        <v-card-text>
+          You can create a new card, or link to an existing one 
+     </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+            <v-btn
+            text
+            @click="showModal2 = true; showModal1= false"
+          >
+            <v-icon class="mr-3">link</v-icon> Link to a card
+          </v-btn>
+          <v-spacer></v-spacer>
+               <v-btn
+            text
+            @click="addUUidtolist()"
+          >
+            <v-icon class="mr-3">queue</v-icon> Add a new card
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog
+      v-model="showModal2"
+      fullscreen
+    >
+ <v-card>
+     <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            icon
+            @click="showModal2 = false"
+          >
+            <v-icon>close</v-icon> 
+          </v-btn>
+        </v-card-actions>
+        <v-card-title >
+        Choose a card to link to
+        </v-card-title>
+       <v-container> 
+<v-row>
+<v-col cols="12" sm="6" md="4" v-for="(linkcard, linkindex) in $root.shadowDB.Cards" :key="linkindex">
+  <v-card>
+  <h3>{{linkcard.title}}</h3>
+<div v-html="linkcard.content"  style="height:200px; overflow-y:auto;"></div>
+  </v-card>
+</v-col>
+</v-row>
+       </v-container>
+
+        <v-card-text>
+          You can create a new card, or link to an existing one 
+     </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+      
+          <v-spacer></v-spacer>
+              <v-btn
+            text
+            @click="showModal2 = true; showModal1= false"
+          >
+            <v-icon class="mr-3">link</v-icon> Link to a card
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -47,24 +135,46 @@ export default {
     CardEditor,
     draggable,
   },
+  data(){
+    return{
+      selectedColumn : null,
+      showModal1 : false,
+      showModal2 : false,
+
+    }
+  },
   props: {
     mynode: Object,
   },
   methods: {
     addNote(o) {
+      this.selectedColumn = o;
       console.log(o);
-      let obj = {
-        uuid: this.$root.uuid.v4(),
+      this.showModal1= true
+     //this.addUUidtolist()
+    },
+    addUUidtolist(uuid) {
+       let obj = {
         state: {},
       };
-      if (!o.notes) {
-        o.notes = [];
-      }
-      o.notes.push(obj);
 
-      this.$set(o, "notes", o.notes);
+      if(!uuid){
+        obj.uuid = this.$root.uuid.v4()
+      }else{
+        obj.uuid = uuid
+      }
+
+      if (!this.selectedColumn.notes) {
+        this.selectedColumn.notes = [];
+      }
+      this.selectedColumn.notes.push(obj);
+      this.selectedColumn = null
+      this.showModal1= false
+      this.showModal2= false
+      this.$set(this.selectedColumn, "notes", this.selectedColumn.notes);
       this.SaveData();
     },
+
       BoxDrag() {
       //should work with simple save change
       this.SaveData();

@@ -4,7 +4,7 @@
     <v-icon>warning</v-icon>  This card is not in the database
 </v-alert>
 <div
- v-if="$root.shadowDB.ManuscriptCards[this.uuid]"  >
+ v-if="$root.shadowDB.ManuscriptCards[this.uuid]" class="manuscripteditor" >
     <v-btn fab small absolute right  @click="showSrc=!showSrc"><v-icon>settings</v-icon></v-btn>
    <v-text-field
           label="Title"
@@ -146,14 +146,3 @@ export default {
 }
 </script>
 
-<style>
-img{
-  max-width:100%
-}
-
-.tiptap-vuetify-editor__toolbar{
-  position: sticky;
-  z-index: 5;
-  top:112px;
-}
-</style>

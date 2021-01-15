@@ -1,25 +1,15 @@
 <template>
 <div>
-
-<v-alert v-if="!$root.shadowDB.Cards[this.uuid]" class="" >
-    <v-icon>warning</v-icon>  This card is not in the database
-</v-alert>
-<div
- v-if="$root.shadowDB.Cards[this.uuid]"  >
  <v-btn fab absolute bottom right x-small @click="editme=!editme"><v-icon>edit</v-icon></v-btn>
-
-
  <div v-if="!editme">
-   <h3  v-if="$root.shadowDB.Cards[uuid].title">
+   <h3 v-if="$root.shadowDB.Cards[uuid].title">
 {{$root.shadowDB.Cards[uuid].title}}</h3>
 <h3 v-else><em>Card Title</em></h3>
-<v-sheet class="ma-2 pa-4" v-if="$root.shadowDB.Cards[uuid].content" v-html="$root.shadowDB.Cards[uuid].content" elevation="2" style="max-height:300px; overflow-y:auto"></v-sheet>
+<v-sheet class="ma-2 pa-4 card_display" v-if="$root.shadowDB.Cards[uuid].content" v-html="$root.shadowDB.Cards[uuid].content" elevation="2" ></v-sheet>
 <div v-else><em>Write here....</em></div>
  </div>
-
-
  <div v-if="editme">
-   <div v-if="editmode==='inline'">
+   <div v-if="editmode==='inline'" class="cardeditor_inline">
    <v-text-field
           label="Title"
           v-model="$root.shadowDB.Cards[uuid].title"
@@ -43,7 +33,18 @@
             persistent
             fullscreen
     >
-        <v-card>
+        <v-card  >
+           <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+           icon
+           absolute top right
+            @click="editme = false"
+          >
+          <v-icon>cancel</v-icon>
+          </v-btn>
+        </v-card-actions>
+        <div class="cardeditor_fullscreen">
         <v-card-title >
        <v-text-field
           label="Title"
@@ -52,7 +53,7 @@
         ></v-text-field>
         </v-card-title>
 
-        <v-card-text>
+        <v-card-text >
     
               <tiptap-vuetify
                  v-if="!showSrc"
@@ -61,29 +62,17 @@
       :toolbar-attributes="toolbarAttrs"
          @blur="SaveChange()"
     />   </v-card-text>
-
+        </div>
         <v-divider></v-divider>
 
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="primary"
-            text
-            @click="editme = false"
-          >
-            I accept
-          </v-btn>
-        </v-card-actions>
+     
       </v-card>
     </v-dialog>
   </div>
-
-
-
     </div>
   </div>
 </div >
-</div>
+
 </template>
 <script>
 import {
@@ -203,7 +192,8 @@ export default {
   },
     props:{
         uuid : String,
-        editmode : String
+        editmode : String,
+        parent:Object
     },
     methods:{
       SaveChange() {
@@ -223,8 +213,9 @@ export default {
 }
     },
     created(){
+      // NO dont do this - and Update will create a new card as needed - too many blank cards in database
+      /*
         if(!this.$root.shadowDB.Cards[this.uuid]){
-         // the card is not in database, meaning it's new! so
          console.log("Adding Record")
             let obj = {}
             obj.uuid=this.uuid
@@ -232,6 +223,7 @@ export default {
             obj.content=""
             this.$root.AddRecord("Cards", obj);
         }
+        */
         
     }
 }
