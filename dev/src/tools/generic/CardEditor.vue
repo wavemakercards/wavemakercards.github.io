@@ -2,12 +2,18 @@
 <div>
  <v-btn fab absolute bottom right x-small @click="editme=!editme"><v-icon>edit</v-icon></v-btn>
  <div v-if="!editme">
+ <div v-if="$root.shadowDB.Cards[uuid]">
    <h3 v-if="$root.shadowDB.Cards[uuid].title">
 {{$root.shadowDB.Cards[uuid].title}}</h3>
 <h3 v-else><em>Card Title</em></h3>
 <v-sheet class="ma-2 pa-4 card_display" v-if="$root.shadowDB.Cards[uuid].content" v-html="$root.shadowDB.Cards[uuid].content" elevation="2" ></v-sheet>
 <div v-else><em>Write here....</em></div>
  </div>
+   
+    <div v-else>
+      Boooo
+    </div>
+     </div>
  <div v-if="editme">
    <div v-if="editmode==='inline'" class="cardeditor_inline">
    <v-text-field
@@ -71,6 +77,7 @@
   </div>
     </div>
   </div>
+
 </div >
 
 </template>
@@ -214,7 +221,7 @@ export default {
     },
     created(){
       // NO dont do this - and Update will create a new card as needed - too many blank cards in database
-      /*
+      
         if(!this.$root.shadowDB.Cards[this.uuid]){
          console.log("Adding Record")
             let obj = {}
@@ -223,7 +230,7 @@ export default {
             obj.content=""
             this.$root.AddRecord("Cards", obj);
         }
-        */
+        
         
     }
 }

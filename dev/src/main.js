@@ -27,6 +27,9 @@ new Vue({
       writer:{
         activenode :  {},
       },
+      addcard:{
+        currentnode :  null,
+      },
       interface: {
         MainNavigationToggle : false,
         showPanel: false,
@@ -53,7 +56,7 @@ new Vue({
     UpdateRecord(myTable, myKey, myData) {
       myData.uuid = myKey;
       myData.lastupdated = Date.now();
-    //  console.log("UpdateRecord",myTable, myKey, myData)
+      console.log("UpdateRecord",myTable, myKey, myData)
       this.$root.db.transaction('rw', myTable, tx => {
         tx.source = this.windowID  // updates are going to be massively more common - so do them manually to the object
         this.shadowDB[myTable][myKey] =  myData;
