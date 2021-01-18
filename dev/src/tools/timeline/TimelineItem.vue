@@ -18,7 +18,7 @@
     </v-row>
 
     <section id="cd-timeline" class="cd-container">
-      <draggable v-model="$root.shadowDB.Timeline[$route.params.id].content"   @change="SaveChange()">
+      <draggable v-model="$root.shadowDB.Timeline[$route.params.id].content" handle=".cd-location"  @change="SaveChange()">
         <transition-group type="transition" :name="'flip-list'">
           <div class="cd-timeline-block" v-for="(card, index)  in $root.shadowDB.Timeline[$route.params.id].content" :key="index">
             <div class="cd-timeline-img cd-location">
@@ -56,7 +56,7 @@
               ><v-icon>delete</v-icon></v-btn>
 </div>
 <v-card-text>
-          <CardEditor :uuid="card.uuid" />
+          <CardEditor :uuid="card.uuid"  editmode="inline" :edit-on="true" :popmenu="false" />
     </v-card-text>
 
         </v-card>

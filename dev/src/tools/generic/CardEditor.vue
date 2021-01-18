@@ -1,8 +1,9 @@
 <template>
 <div>
- <v-btn fab absolute bottom right x-small @click="editme=!editme"><v-icon>edit</v-icon></v-btn>
+ <v-btn v-if="!editOn" fab absolute bottom right x-small @click="editme=!editme"><v-icon>edit</v-icon></v-btn>
  <div v-if="!editme">
  <div v-if="$root.shadowDB.Cards[uuid]">
+
    <h3 v-if="$root.shadowDB.Cards[uuid].title">
 {{$root.shadowDB.Cards[uuid].title}}</h3>
 <h3 v-else><em>Card Title</em></h3>
@@ -24,7 +25,7 @@
               <tiptap-vuetify
                  v-if="!showSrc"
       v-model="$root.shadowDB.Cards[uuid].content"
-      :extensions="extensions"
+      :extensions="compExtensions"
       :toolbar-attributes="toolbarAttrs"
          @blur="SaveChange()"
     /> 
@@ -64,7 +65,7 @@
               <tiptap-vuetify
                  v-if="!showSrc"
       v-model="$root.shadowDB.Cards[uuid].content"
-      :extensions="extensions"
+      :extensions="compExtensions"
       :toolbar-attributes="toolbarAttrs"
          @blur="SaveChange()"
     />   </v-card-text>
@@ -107,6 +108,14 @@ import {
  
 export default {
     computed: {
+    compExtensions(){
+      if(this.popmenu){
+        return this.bubbleextensions
+    }else{
+         return this.extensions
+    }
+    },
+
     toolbarAttrs() {
       return this.$vuetify.theme.isDark
         ? { color: "dark", dark: true }
@@ -149,16 +158,16 @@ export default {
       ],
 
       // Custom order of extensions to change the order of the buttons
-      extensions: [
-        [Link,{renderIn: 'bubbleMenu'}],
+      bubbleextensions: [
+        [Bold,{renderIn: 'bubbleMenu'}],
       [
-        Underline,
+        Italic,
         {
           renderIn: 'bubbleMenu'
         }
       ],
       [
-        Strike,
+        Paragraph,
         {
           renderIn: 'bubbleMenu'
         }
@@ -169,19 +178,18 @@ export default {
           renderIn: 'bubbleMenu',
           // extension's options
           options: {
-            levels: [1, 2, 3]
+            levels: [1, 2,]
           }
         }
       ],
-      // Render in the toolbar
-      [
-        Blockquote,
+       [
+        Image,
         {
           renderIn: 'bubbleMenu'
         }
       ],
-
-
+      ],
+      extensions :[
         Bold,
         Italic,
         Paragraph,
@@ -194,13 +202,15 @@ export default {
           }
         ],
         Image
-      ],
+      ]
     }
   },
     props:{
         uuid : String,
         editmode : String,
-        parent:Object
+        parent:Object,
+        editOn : Boolean,
+        popmenu : Boolean
     },
     methods:{
       SaveChange() {
@@ -220,8 +230,6 @@ export default {
 }
     },
     created(){
-      // NO dont do this - and Update will create a new card as needed - too many blank cards in database
-      
         if(!this.$root.shadowDB.Cards[this.uuid]){
          console.log("Adding Record")
             let obj = {}
@@ -230,7 +238,11 @@ export default {
             obj.content=""
             this.$root.AddRecord("Cards", obj);
         }
-        
+    if(this.editOn){
+  this.editme= true
+}
+
+
         
     }
 }
