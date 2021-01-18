@@ -199,7 +199,7 @@ h1,h2,h3,h4,h5,h6 {
 .cardeditor_inline .tiptap-vuetify-editor__toolbar{
   position: sticky;
   z-index: 5;
-  top:0px;
+  top:60px;
 }
 .cardeditor_inline img{
   max-width:100%;
