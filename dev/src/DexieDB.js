@@ -1,5 +1,7 @@
 import Dexie from 'dexie';
 import 'dexie-observable';
+import "dexie-export-import";
+
 
 const db = new Dexie('wavemaker');
 db.version(1).stores({

@@ -41,8 +41,15 @@ new Vue({
       windowID: null
     }
   },
-
   methods: {
+    progressCallback ({totalRows, completedRows}) {
+      console.log(`Progress: ${completedRows} of ${totalRows} rows completed`);
+    },
+  async exportDatabase(){
+      let progressCallback=this.progressCallback
+      const blob = await this.db.exportDB(this.db, {prettyJson: true, progressCallback});
+      console.log(blob)
+    },
     AddRecord(myTable, myData) {
      // console.log("AddRecord",myTable,myData)
       myData.lastupdated = Date.now();

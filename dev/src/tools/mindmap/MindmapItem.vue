@@ -17,23 +17,19 @@
       </v-col>
     </v-row>
     <div id="scroller" @mousemove="DrawingLine()">
-
-    <div
-          class="lineDrawing"
-          :style="DrawLineStyle"
-        ></div>
+      <div class="lineDrawing" :style="DrawLineStyle"></div>
 
       <template
         v-for="links in Object.entries(
           $root.shadowDB.Mindmap[$route.params.id].content
         )"
       >
-       <div
+        <div
           v-for="(lineitem, index) in Object.entries(links[1].linksOut)"
           :key="index + links[0]"
           class="lineDraw"
-          @click="DeleteLink(links[0],lineitem[0])"
-          :style="lineStyle(links[0],lineitem[0])"
+          @click="DeleteLink(links[0], lineitem[0])"
+          :style="lineStyle(links[0], lineitem[0])"
         ></div>
       </template>
       <template
@@ -42,7 +38,7 @@
         )"
       >
         <vue-draggable-resizable
-        :key="item[0]"
+          :key="item[0]"
           :parent="false"
           :w="item[1].width"
           :h="item[1].height"
@@ -58,46 +54,41 @@
         >
           <v-card
             :width="item[1].width"
-            :height="item[1].height"
-            style="overflow: hidden; overflow-y: scroll"
+         
           >
             <div class="drag">
               <v-btn small icon><v-icon>drag_handle</v-icon></v-btn>
             </div>
 
-            <v-card-text>
-              <div
-                style="text-align: left; width: 100%; background-color: purple"
-              >
-                X:{{ item[1].x }} Y:{{ item[1].y }} <br />
-                {{ item[1].width }} x {{ item[1].height }}
-              </div>
+            <v-card-text v-if="item[1].type==='text'"  
+              class="pt-1 mt-0"
+              :class="[
+            (item[0]===currentitem[0]) ? 'active' : 'faded',]">
+          <v-textarea
+          class="ma-0 pa-0 mb-1"
+          value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+          v-model="item[1].content"
+            rows="1"
+            auto-grow
+            @blur="SaveChange()"
+        ></v-textarea>
+               
+   
             </v-card-text>
-          <v-card-actions>
-             <v-btn
-              x-small
-              icon
-              
-              
-         
-              @click="createLink(item)"   
-              ><v-icon>link</v-icon></v-btn>
+        
+              <v-btn x-small absolute left bottom  fab color="success" @click="createLink(item)"
+                ><v-icon>link</v-icon></v-btn
+              >
 
-               <v-btn
-              x-small 
-             
-              
-             
-           icon
-              @click="DeleteNode(item)"   
-              ><v-icon>delete</v-icon></v-btn>
-          </v-card-actions>
-          </v-card>
+              <v-btn x-small absolute right bottom  fab color="error" @click="DeleteNode(item)"
+                ><v-icon>delete</v-icon></v-btn
+              >
          
+          </v-card>
         </vue-draggable-resizable>
       </template>
     </div>
-    <v-btn icon absolute bottom right @click="AddNode()"
+    <v-btn class="mt-8" color="accent" fab absolute top right @click="AddNode()"
       ><v-icon>add</v-icon></v-btn
     >
   </v-main>
@@ -106,7 +97,7 @@
 <script>
 import VueDraggableResizable from "vue-draggable-resizable";
 // optionally import default styles
-//import 'vue-draggable-resizable/dist/VueDraggableResizable.css'
+//import "vue-draggable-resizable/dist/VueDraggableResizable.css";
 export default {
   components: {
     VueDraggableResizable,
@@ -115,7 +106,8 @@ export default {
     return {
       createlink: null,
       currentitem: [],
-      DrawLineStyle : { "top" : "-10000px"}
+      DrawLineStyle: { top: "-10000px" },
+      LastNodePos : null
     };
   },
   methods: {
@@ -126,69 +118,78 @@ export default {
         if (this.createlink != item) {
           let start = this.createlink;
           let end = item;
-          this.$set(this.$root.shadowDB.Mindmap[this.$route.params.id].content[start[0]].linksOut, end[0] ,1)
-  this.$set(this.$root.shadowDB.Mindmap[this.$route.params.id].content[end[0]].linksIn, start[0] ,1);
-         console.log("create", start, end )
-          this.createlink = null;        
-
-
-
+          this.$set(
+            this.$root.shadowDB.Mindmap[this.$route.params.id].content[start[0]]
+              .linksOut,
+            end[0],
+            1
+          );
+          this.$set(
+            this.$root.shadowDB.Mindmap[this.$route.params.id].content[end[0]]
+              .linksIn,
+            start[0],
+            1
+          );
+          console.log("create", start, end);
+          this.createlink = null;
 
           this.SaveChange();
-        }else{
-           this.createlink = null;     
+        } else {
+          this.createlink = null;
         }
         // else - its the same link
       }
     },
 
-DeleteLink(src,target){
-this.$delete (this.$root.shadowDB.Mindmap[this.$route.params.id].content[src].linksOut, target)
-this.$delete (this.$root.shadowDB.Mindmap[this.$route.params.id].content[target].linksIn, src)
-  this.SaveChange();
-},
-
-DrawingLine(){
-
-if(this.createlink){ 
-  var off1 = this.createlink[1]
-
-var rect = document.getElementById("scroller").getBoundingClientRect();
-
-  
-      // center of first point
-      var dx1 = off1.x + off1.width / 2;
-      var dy1 = off1.y + off1.height / 2;
-      // center of second point
-      var dx2 = event.clientX - rect.left 
-      var dy2 = event.clientY - rect.top
-      // distance
-      var length = Math.sqrt(
-        (dx2 - dx1) * (dx2 - dx1) + (dy2 - dy1) * (dy2 - dy1)
+    DeleteLink(src, target) {
+      this.$delete(
+        this.$root.shadowDB.Mindmap[this.$route.params.id].content[src]
+          .linksOut,
+        target
       );
-      // center
-      var cx = (dx1 + dx2) / 2 - length / 2;
-      var cy = (dy1 + dy2) / 2 - 2 / 2;
-      // angle
-      var angle = Math.atan2(dy1 - dy2, dx1 - dx2) * (180 / Math.PI);
-      // draw line
+      this.$delete(
+        this.$root.shadowDB.Mindmap[this.$route.params.id].content[target]
+          .linksIn,
+        src
+      );
+      this.SaveChange();
+    },
 
-      var o = {
-        top: cy + "px",
-        left: cx + "px",
-        width: length + "px",
-        transform: "rotate(" + angle + "deg)",
-      };
-    
-      this.DrawLineStyle =  o;
+    DrawingLine() {
+      if (this.createlink) {
+        var off1 = this.createlink[1];
 
-}else{
-  this.DrawLineStyle = { "top" : "-10000px"}
-}
+        var rect = document.getElementById("scroller").getBoundingClientRect();
 
-}
-,
+        // center of first point
+        var dx1 = off1.x + off1.width / 2;
+        var dy1 = off1.y + off1.height / 2;
+        // center of second point
+        var dx2 = event.clientX - rect.left;
+        var dy2 = event.clientY - rect.top;
+        // distance
+        var length = Math.sqrt(
+          (dx2 - dx1) * (dx2 - dx1) + (dy2 - dy1) * (dy2 - dy1)
+        );
+        // center
+        var cx = (dx1 + dx2) / 2 - length / 2;
+        var cy = (dy1 + dy2) / 2 - 2 / 2;
+        // angle
+        var angle = Math.atan2(dy1 - dy2, dx1 - dx2) * (180 / Math.PI);
+        // draw line
 
+        var o = {
+          top: cy + "px",
+          left: cx + "px",
+          width: length + "px",
+          transform: "rotate(" + angle + "deg)",
+        };
+
+        this.DrawLineStyle = o;
+      } else {
+        this.DrawLineStyle = { top: "-10000px" };
+      }
+    },
     lineStyle(src, target) {
       var off1 = this.$root.shadowDB.Mindmap[this.$route.params.id].content[
         src
@@ -219,16 +220,17 @@ var rect = document.getElementById("scroller").getBoundingClientRect();
         width: length + "px",
         transform: "rotate(" + angle + "deg)",
       };
-    
+
       return o;
     },
 
     onActivated(i) {
       this.currentitem = i;
-    //  console.log("selected", i);
+      this.LastNodePos = i
+     //   console.log("selected", i);
     },
     onDeactivated() {
-  //    console.log("Deactivated Node");
+    //   console.log("Deactivated Node");
       this.$set(
         this.$root.shadowDB.Mindmap[this.$route.params.id].content,
         this.currentitem[0],
@@ -252,7 +254,6 @@ var rect = document.getElementById("scroller").getBoundingClientRect();
       if (x < 10 || y < 10) {
         return false;
       } // prevent them dropping a card off the top or left
-
       this.currentitem[1].y = y;
       this.currentitem[1].x = x;
       this.$set(
@@ -261,34 +262,43 @@ var rect = document.getElementById("scroller").getBoundingClientRect();
         this.currentitem[1]
       );
     },
-    DeleteNode(item){
+    DeleteNode(item) {
       // we need to delete the linksOut to this node from any other nodes
-      let deleteUid = item[0]
-      Object.entries(this.$root.shadowDB.Mindmap[this.$route.params.id].content).forEach(element => {
-      this.$delete(element[1].linksOut,deleteUid)
+      let deleteUid = item[0];
+      Object.entries(
+        this.$root.shadowDB.Mindmap[this.$route.params.id].content
+      ).forEach((element) => {
+        this.$delete(element[1].linksOut, deleteUid);
       });
-      this.$delete(this.$root.shadowDB.Mindmap[this.$route.params.id].content,deleteUid)
-     this.SaveChange();
+      this.$delete(
+        this.$root.shadowDB.Mindmap[this.$route.params.id].content,
+        deleteUid
+      );
+      this.SaveChange();
     },
-    AddNode(x, y) {
-      let startx = x;
-      let starty = y;
-      if (!startx) {
-        startx = 10;
+    AddNode() {
+      console.log("lastpos ",this.LastNodePos)
+      let startx = 10;
+      let starty = 10;
+      let startWidth = 300
+      let startHeight = 200
+      if(this.LastNodePos){
+          startx = this.LastNodePos[1].x + 10 + this.LastNodePos[1].width
+          starty = this.LastNodePos[1].y
       }
-      if (!starty) {
-        starty = 10;
-      }
+        this.LastNodePos = null  // not actually essential but will make the position reset after each addition if no selection made
       let uuid = this.$root.uuid.v4();
       let n = {
         x: startx,
         y: starty,
-        width: 200,
-        height: 200,
-        linksIn : {},
-        linksOut : {},
+        width: startWidth,
+        height: startHeight,
+        type : 'text', 
+        content : '',
+        linksIn: {},
+        linksOut: {},
       };
-     // console.log(uuid, n);
+      // console.log(uuid, n);
 
       this.$set(
         this.$root.shadowDB.Mindmap[this.$route.params.id].content,
@@ -309,17 +319,17 @@ var rect = document.getElementById("scroller").getBoundingClientRect();
 </script>
 
 <style scoped >
-  .fab-container {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width:100%
-  }
+.fab-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
 .lineDraw {
   position: absolute;
-    background-color: var(--c6);
+  background-color: var(--c6);
   height: 5px;
-  cursor : pointer
+  cursor: pointer;
 }
 
 .lineDrawing {
@@ -345,5 +355,15 @@ var rect = document.getElementById("scroller").getBoundingClientRect();
 .drag {
   text-align: right;
   cursor: pointer;
+  top:0px;
+
+  width:100%
+}
+
+.active{
+  opacity: 1;
+}
+.faded{
+  opacity: 0.5;
 }
 </style>
