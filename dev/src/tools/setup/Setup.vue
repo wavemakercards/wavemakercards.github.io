@@ -109,22 +109,37 @@ export default {
     };
   },
   methods: {
-    logmein() {
+  async  logmein() {
       // need to do an ajax log in to wavemaker that will return the session info as JSON
       this.message = null;
-      var xhr = new XMLHttpRequest();
+     
+     
+     var xhr = new XMLHttpRequest();
       xhr.open("POST", "https://wavemaker.co.uk/api/", true);
       xhr.setRequestHeader(
         "Content-Type",
         "application/x-www-form-urlencoded; charset=UTF-8"
       );
 
-      xhr.onreadystatechange = () => {
+      xhr.onreadystatechange = async () => {
         if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
           let myresult = JSON.parse(xhr.responseText);
           if (myresult.state === "success") {
             this.LoginForm = false;
               let mysettings = JSON.parse(myresult.settings)
+              let dbfile= myresult.dbfile
+              
+                console.log(dbfile)
+          
+                let blob = await fetch(dbfile).then(r => r.blob())
+
+                console.log(blob)
+
+               await this.$root.importDB(blob)
+                
+
+
+
                 // just passa an object for now WILL NEED ADDRESSING LATER
                 mysettings = { mode : "dark"}
             this.$root.AddRecord("Settings", mysettings);

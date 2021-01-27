@@ -6,6 +6,7 @@ import db from "./DexieDB";
 import { uuid } from 'vue-uuid';
 import vuetify from './plugins/vuetify';
 import { TiptapVuetifyPlugin } from 'tiptap-vuetify'
+import { importDB, exportDB} from "dexie-export-import";
 // don't forget to import CSS styles
 import 'tiptap-vuetify/dist/main.css'
 // Vuetify's CSS styles 
@@ -22,6 +23,8 @@ new Vue({
   data() {
     return {
       db,
+      importDB,
+      exportDB,
       uuid,
       dbloaded: false,
       writer:{
@@ -42,13 +45,30 @@ new Vue({
     }
   },
   methods: {
-    progressCallback ({totalRows, completedRows}) {
-      console.log(`Progress: ${completedRows} of ${totalRows} rows completed`);
+    async export_db(){
+      let result =  await this.exportDB(this.db,{
+        prettyJson: true,
+        progressCallback: ({ totalRows, completedRows }) => {
+          console.log(
+            `Progress: ${completedRows} of ${totalRows} rows completed`
+          );
+        },
+      })
+      return result
     },
-  async exportDatabase(){
-      let progressCallback=this.progressCallback
-      const blob = await this.db.exportDB(this.db, {prettyJson: true, progressCallback});
-      console.log(blob)
+    async  import_db(blob){
+      await this.db.delete()
+      await this.importDB(this.db,blob,
+        {
+          prettyJson: true,
+          progressCallback: ({ totalRows, completedRows }) => {
+            console.log(
+              `Progress: ${completedRows} of ${totalRows} rows completed`
+            );
+          },
+        }
+        
+        )
     },
     AddRecord(myTable, myData) {
      // console.log("AddRecord",myTable,myData)

@@ -1,8 +1,5 @@
 import Dexie from 'dexie';
 import 'dexie-observable';
-import "dexie-export-import";
-
-
 const db = new Dexie('wavemaker');
 db.version(1).stores({
     Settings : `$$uuid, settings, lastupdated`,
@@ -17,4 +14,5 @@ db.version(1).stores({
 /* 
 The observable elements are set up in main.js
 */
+
 export default db;
