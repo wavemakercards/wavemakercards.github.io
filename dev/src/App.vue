@@ -79,7 +79,7 @@ export default {
    data() {
     return {
       registration: null,
-      updateExists: true,
+      updateExists: false,
     }
   },
   created() {
