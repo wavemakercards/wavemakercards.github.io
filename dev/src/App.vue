@@ -54,7 +54,12 @@ export default {
       window.location.reload(true)
     },
     trigger(e) {
-      if (e.shiftKey && e.key === "Enter") {
+      if (e.shiftKey && e.key === "Backspace") {
+        if(confirm("You really wanna clear the database?")){
+          this.WavemakerReset()
+        }
+      }
+     if (e.shiftKey && e.key === "Enter") {
         console.log("ShadowDB : ", this.$root.shadowDB);
       }
     },

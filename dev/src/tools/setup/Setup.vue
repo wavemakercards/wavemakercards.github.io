@@ -112,7 +112,62 @@ export default {
   async  logmein() {
       // need to do an ajax log in to wavemaker that will return the session info as JSON
       this.message = null;
-     
+
+ const postData = new FormData;
+postData.append('email', this.login.email);
+postData.append('password', this.login.password);
+        await fetch(`https://wavemaker.co.uk/api/` , {
+         method:"POST",
+          body:postData })
+            .then(response => {
+                if (response.ok)
+                {
+                       console.log("Data Posted")
+                       console.log("response",response)
+                         return response;
+                }
+                else {
+                  throw Error(`Server returned ${response.status}: ${response.statusText}`)
+                }
+            })
+            .then(async (data) => 
+            {
+            console.log(data)
+            let myresult= await data.text()
+             console.log(myresult)
+           myresult=JSON.parse(myresult)
+               
+            if (myresult.state === "success") {
+            this.LoginForm = false;
+              let mysettings = JSON.parse(myresult.settings)
+              let dbfile= myresult.dbfile
+              
+                console.log(dbfile)
+          
+                let blob = await fetch(dbfile).then(r => r.blob())
+
+                console.log(blob)
+
+               await this.$root.importDB(blob)
+                // just passa an object for now WILL NEED ADDRESSING LATER
+                mysettings = { mode : "dark"}
+            this.$root.AddRecord("Settings", mysettings);
+            this.$root.interface.MainNavigationToggle = true;
+           window.location="/" // forces the refresh of the system nicely
+           //this.$router.push("/");
+          } else {
+            this.login.message = myresult.message;
+          }
+
+         
+            }
+            )
+            .catch(err => {
+                this.message = "There was a Problem Connecting : Check the console (f12)";
+                console.error(err)
+            });
+
+/*
      
      var xhr = new XMLHttpRequest();
       xhr.open("POST", "https://wavemaker.co.uk/api/", true);
@@ -155,7 +210,9 @@ export default {
       };
       xhr.send(
         "email=" + this.login.email + "&password=" + this.login.password
-      );
+      );]
+
+      */
     },
     step1() {
       this.Feedback.push("Looking for existing config file");

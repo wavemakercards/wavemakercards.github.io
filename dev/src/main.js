@@ -121,7 +121,7 @@ new Vue({
       this.$router.push("/");
     }
 
-    this.windowID = this.$root.uuid.v1() // each window generates a unique ID so it knows who is doing the emitting of changes
+    this.windowID = this.$root.uuid.v4() // each window generates a unique ID so it knows who is doing the emitting of changes
     /*
     The Shadow DB is a Reactive Object copy of the database
     You  WRITE to the shadowDB and save it to the database and it will emit changes to all (other) windows

@@ -18,31 +18,35 @@ export default {
     async ExportDownload() {
       console.log("Exporting");
       const exportData = await this.$root.export_db()
- 
       this.downloadBlob(exportData, "mytest.json");
     },
     async ExportUpload() {
-        console.log("Uploading");
-            const exportData = await this.$root.export_db()
-          console.log("uploading")
+        console.log("Exporting Database");
+        const exportData = await this.$root.export_db()
+          console.log("Uploading to server")
 
-        fetch(`https://wavemaker.co.uk/api/upload.php`, {method:"POST", body:exportData})
+       await fetch(`https://wavemaker.co.uk/api/upload.php`, {method:"POST", body:exportData})
             .then(response => {
                 if (response.ok)
                 {
-                       alert("Synced Up successfully")
+                       console.log("Synced Up successfully")
+                       console.log("Sync",response)
                          return response;
                 }
                 else {
                   throw Error(`Server returned ${response.status}: ${response.statusText}`)
                 }
             })
-            .then(response => console.log(response.text()))
+            .then(async (data) => 
+            {
+            console.log(data.url)
+            let x= await data.text()
+            console.log(x)
+            }
+            )
             .catch(err => {
                 console.log(err);
             });
-
-
 
     },
     downloadBlob(blob, name = "file.txt") {
