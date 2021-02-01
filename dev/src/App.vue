@@ -64,6 +64,7 @@ export default {
     },
     refreshApp() {
   this.updateExists = false
+  this.WavemakerReset()
   // Make sure we only send a 'skip waiting' message if the SW is waiting
   if (!this.registration || !this.registration.waiting) return
   // Send message to SW to skip the waiting and activate the new SW
@@ -79,7 +80,7 @@ export default {
    data() {
     return {
       registration: null,
-      updateExists: false,
+      updateExists: true,
     }
   },
   created() {

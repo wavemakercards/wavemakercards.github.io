@@ -136,15 +136,12 @@ export default {
                 console.log(blob)
 
                await this.$root.importDB(blob)
-                
-
-
-
                 // just passa an object for now WILL NEED ADDRESSING LATER
                 mysettings = { mode : "dark"}
             this.$root.AddRecord("Settings", mysettings);
             this.$root.interface.MainNavigationToggle = true;
-            this.$router.push("/");
+           window.location="/" // forces the refresh of the system nicely
+           //this.$router.push("/");
           } else {
             this.login.message = myresult.message;
           }
