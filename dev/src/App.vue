@@ -34,9 +34,7 @@
   </v-btn>
 </v-snackbar>
       <MainNavigation v-if="$root.interface.MainNavigationToggle" />
-  
         <router-view></router-view>
-
     </v-app>
   </div>
 </template>

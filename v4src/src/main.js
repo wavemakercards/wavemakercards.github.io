@@ -27,8 +27,6 @@ window.App = new Vue({
                 SelectedCard: { uuid: null },
                 FileList: []
             }
-
-
         },
         db,
         uuid

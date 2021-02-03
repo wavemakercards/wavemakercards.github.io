@@ -119,11 +119,13 @@ postData.append('password', this.login.password);
         await fetch(`https://wavemaker.co.uk/api/` , {
          method:"POST",
           body:postData })
-            .then(response => {
+            .then(async (response) => {
                 if (response.ok)
                 {
-                       console.log("Data Posted")
+                       //console.log("Data Posted")
                        console.log("response",response)
+                       let  d= await response.text()
+                       console.log("here ",d)
                          return response;
                 }
                 else {
@@ -132,28 +134,41 @@ postData.append('password', this.login.password);
             })
             .then(async (data) => 
             {
-            console.log(data)
+            //console.log(data)
             let myresult= await data.text()
-             console.log(myresult)
-           myresult=JSON.parse(myresult)
+            //console.log(myresult)
+            myresult=JSON.parse(myresult)
                
             if (myresult.state === "success") {
             this.LoginForm = false;
               let mysettings = JSON.parse(myresult.settings)
+              console.log(mysettings.settings)
+                          
+              
               let dbfile= myresult.dbfile
               
                 console.log(dbfile)
           
-                let blob = await fetch(dbfile).then(r => r.blob())
+                let blob = await fetch(dbfile+"?uid="+this.$root.uuid.v4()).then(r => r.blob())
 
                 console.log(blob)
 
                await this.$root.importDB(blob)
                 // just passa an object for now WILL NEED ADDRESSING LATER
-                mysettings = { mode : "dark"}
-            this.$root.AddRecord("Settings", mysettings);
+            mysettings = { mode : "dark", language:"en"}
+
+         await fetch('https://raw.githubusercontent.com/wavemakercards/wavemakercards.github.io/master/lang/en.json')
+    .then(res => res.json())
+    .then((out) => {
+        console.log('Output: ', out);
+        mysettings.lang=out
+}).catch(err => console.error(err));
+ let mydata={}
+ mydata.settings = mysettings
+mydata.id =1
+           this.$root.UpdateRecord("Settings",  "test",mydata);
             this.$root.interface.MainNavigationToggle = true;
-           window.location="/" // forces the refresh of the system nicely
+          window.location="/" // forces the refresh of the system nicely
            //this.$router.push("/");
           } else {
             this.login.message = myresult.message;
