@@ -31,6 +31,7 @@ module.exports = {
       }
     }
   },
+  /*
   pwa: {
     name: 'wavemaker4',
     themeColor: '#4DBA87',
@@ -40,10 +41,10 @@ module.exports = {
     // configure the workbox plugin
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      // swSrc is required in InjectManifest mode.
-      swSrc: 'sw.js',
+    // swSrc is required in InjectManifest mode.
+    swSrc: 'sw.js',
       // ...other Workbox options...
     }
   }
-  
+  */
 }
