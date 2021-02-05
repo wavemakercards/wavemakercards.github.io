@@ -124,8 +124,7 @@ postData.append('password', this.login.password);
                 {
                        //console.log("Data Posted")
                        console.log("response",response)
-                       let  d= await response.text()
-                       console.log("here ",d)
+
                          return response;
                 }
                 else {
@@ -142,12 +141,12 @@ postData.append('password', this.login.password);
             if (myresult.state === "success") {
             this.LoginForm = false;
               let mysettings = JSON.parse(myresult.settings)
-              console.log(mysettings.settings)
+              console.log("Settings found ",mysettings.settings)
                           
               
               let dbfile= myresult.dbfile
               
-                console.log(dbfile)
+                console.log("File Location of Backup ", dbfile)
           
                 let blob = await fetch(dbfile+"?uid="+this.$root.uuid.v4()).then(r => r.blob())
 
