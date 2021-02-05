@@ -3,7 +3,7 @@
 import { register } from 'register-service-worker'
 
 if (process.env.NODE_ENV === 'production' && !process.env.IS_ELECTRON) {  // disable for Electron version  : see :https://github.com/nklayman/vue-cli-plugin-electron-builder/issues/659
-  register(`${process.env.BASE_URL}service-worker.js`, {
+  register(`../service-worker.js`, {
     ready() {
       console.log(
         'App is being served from cache by a service worker.\n' +
