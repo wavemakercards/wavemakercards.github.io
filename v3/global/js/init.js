@@ -185,7 +185,7 @@ function gatherStats () {
 }
 
 function countWords (str) {
-  console.log("counting");
+  //console.log("counting");
   if (!str) {
     return 0;
   } else {
