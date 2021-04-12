@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+
+/* this should prevent the pull down refresh from happening*/
+body {
+    overscroll-behavior-y: contain;
+}
+:root {
+    --c0: #EDE7F6;
+    --c1: #D1C4E9;
+    --c2: #B39DDB;
+    --c3: #9575CD;
+    --c4: #7E57C2;
+    --c5: #673AB7;
+    --c6: #5E35B1;
+    --c7: #512DA8;
+    --c8: #4527A0;
+    --c9: #311B92;
+
+    --c1: #cfd8dc;
+    --c2: #b0bec5;
+    --c3: #90a4ae;
+    --c4: #78909c;
+    --c5: #607d8b;
+    --c6: #546e7a;
+    --c7: #455a64;
+    --c8: #37474f;
+    --c9: #263238;
+
+    --c0: #fafafa;
+    --c1: #f5f5f5;
+    --c2: #eeeeee;
+    --c3: #e0e0e0;
+    --c4: #bdbdbd;
+    --c5: #9e9e9e;
+    --c6: #757575;
+    --c7: #616161;
+    --c8: #424242;
+    --c9: #212121;
+  
+    --logo-top: var(--c4);
+    --logo-bottom: var(--c7);
+    --main-background: var(--c3);
+    --main-foreground: var(--c9);
+    --interface-button-background: var(--c9);
+    --interface-button-foreground: var(--c0);
+    --input-field-background: var(--c2);
+    --input-field-foreground: var(--c9);
+    --interface-button-background-hover: var(--c7);
+    --interface-button-foreground-hover: var(--c0);
+    --interface-button-background-danger: #8c0000;
+    --interface-button-foreground-danger: var(--c0);
+    --interface-button-background-success: #116600;
+    --interface-button-foreground-success: var(--c0);
+    --side-nav-bar-background: var(--c9);
+    --side-nav-bar-foreground: var(--c0);
+    --side-nav-bar-button-background: var(--c9);
+    --side-nav-bar-button-foreground: var(--c0);
+    --side-nav-bar-button-background-hover: var(--c7);
+    --side-nav-bar-button-foreground-hover: var(--c0);
+    --side-tool-panel-background: var(--c7);
+    --side-tool-panel-foreground: var(--c0);
+    --system-font: "Quicksand";
+    --manuscriptFont: "Halant";
+    --default-font-size: 40px;
+    --manuscriptFont: "'Halant', serif";
+    --manuscriptAlign: "left";
+    --manuscriptFontSize: 1.3rem;
+    --manuscriptLineHeight: 1.7rem;
+    --manuscriptParaIndent: 20px;
+    --manuscriptMarginBottom: 20px;
+    --manuscriptPaperStyle: 800px;
+    --menu-indent-padding: 0px;
+    /*
+Setting General Interface Variables
+*/
+    --base-foreground-color: var(--c0);
+    --base-background-color: var(--c9);
+    --system-font: var(--custom-system-font: ), "Quicksand", sans-serif;
+    --editor-background-color: var(--c3);
+    --paper-background-color: var(--c0);
+    --paper-text-color: var(--c9);
+    --list-fg: var(--c0);
+    --list-bg: transparent;
+    --sub-list-fg: var(--c0);
+    --sub-list-bg: var(--c7);
+}
+
+
+.logo-top{
+    fill : var(--logo-top);
+}
+.logo-bottom{
+    fill : var(--logo-bottom);
+}
+
+.logo-text-4{
+    font-family: 'Molle', cursive;
+    font-size: 2rem;
+}
+
+html{
+    overflow-y: auto;
+
+}
+
+html, body{
+    box-sizing: border-box;
+ 
+  
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  /*  transition: all 0.2s ease;*/
+  }
+::-webkit-scrollbar-button {
+    display: block;
+    height: 0px;
+    border-radius: 0px;
+    background-color: var(--c5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--c5);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--c9);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+.theme--dark.v-application {
+    font-family: var(--system-font);
+ /*   background-color: var(--v-background-base, #424242) !important;*/
+}
+.theme--light.v-application {
+    font-family: var(--system-font)
+    /*
+    Example here of how to do the background images etc if wanted
+    background-color: var(--v-background-base, #ccc) !important;
+    background : none !important;
+    background: url('https://www.vanseodesign.com/blog/wp-content/uploads/2011/10/background-3.jpg') no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  */
+}
+
+
+/*
+  Manuscript editor CSS
+*/
+
+.manuscripteditor img{
+    max-width:100%;
+  }
+  
+  .manuscripteditor .tiptap-vuetify-editor__toolbar{
+    position: sticky;
+    z-index: 5;
+    top:112px;
+  }
+
+
+  /*
+  Card Fullscreen editor CSS
+  */
+  .cardeditor_fullscreen{
+      max-width:900px;
+      margin:0 auto;
+  }
+  .cardeditor_fullscreen .tiptap-vuetify-editor__toolbar{
+    position: sticky;
+    z-index: 5;
+    top:0px;
+  }
+  .cardeditor_fullscreen img{
+    max-width:100%;
+  }
+  
+
+    /*
+  Card Inline editor CSS
+  */
+  .cardeditor_inline{
+    max-width:900px;
+    margin:0 auto;
+}
+.cardeditor_inline .tiptap-vuetify-editor__toolbar{
+  position: sticky;
+  z-index: 5;
+  top:60px;
+}
+.cardeditor_inline img{
+  max-width:100%;
+}
+
+    /*
+  Card Display  CSS
+  */
+.card_display{
+    max-height:300px; 
+    overflow-y:auto
+}
+  .card_display img{
+    max-width:100%;
+  }

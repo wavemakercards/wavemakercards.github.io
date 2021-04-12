@@ -76,6 +76,7 @@ $(document).off("click", "#SyncUpGdrive").on("click","#SyncUpGdrive",function ()
       if (result.value) {
        
     GoogleQuickSignIn()
+   
       }
     })
 
@@ -146,7 +147,7 @@ function loadtool (toolname) {
 }
 
 function InitialWC (dta) {
-  //console.log(dta)
+  console.log("WC ",dta)
   if (dta.data) {
     IntitalCount = IntitalCount + countWords(dta.data.content);
     if (dta.children !== undefined) {
@@ -184,11 +185,15 @@ function gatherStats () {
 }
 
 function countWords (str) {
+  //console.log("counting");
   if (!str) {
     return 0;
   } else {
-    str = str.replace(/[^\w\s]|_/g, "")
-      .replace(/\s+/g, " ");
+    // this only seems to do english
+   // str = str.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
+ // this is to try and make sure that the markdown has punctuation ONLY removed
+      str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s+/g, " ");
+
 
     res = str.split(' ')
       .filter(function (n) { return n != '' })
