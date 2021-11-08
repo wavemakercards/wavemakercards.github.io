@@ -6,7 +6,7 @@
 
 var WMproject = {};
 var WMsettings = {};
-var IsGoogleDrive ;
+var IsGoogleDrive = false;
 const db = new Dexie("wavemaker");
 db.version(1).stores({
   settings: "++id,settings",
