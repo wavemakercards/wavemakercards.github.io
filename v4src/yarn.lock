@@ -3409,10 +3409,10 @@ dexie-observable@^1.0.0-beta.8:
   resolved "https://registry.yarnpkg.com/dexie-observable/-/dexie-observable-1.0.0-beta.8.tgz#1c9000935327a96f493b4be866d56a838d6e3240"
   integrity sha512-Xn3rxOLTLFQ1FJo5DiMAobOpi7qEknXK2IXl9gPg1SbCnGPB6ZMNGQs3KHkpm6P+kGqoe7g51pKUfp+/p10fpg==
 
-dexie@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/dexie/-/dexie-2.0.4.tgz#6027a5e05879424e8f9979d8c14e7420f27e3a11"
-  integrity sha512-aQ/s1U2wHxwBKRrt2Z/mwFNHMQWhESerFsMYzE+5P5OsIe5o1kgpFMWkzKTtkvkyyEni6mWr/T4HUJuY9xIHLA==
+dexie@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.2.tgz#fa6f2a3c0d6ed0766f8d97a03720056f88fe0e01"
+  integrity sha512-q5dC3HPmir2DERlX+toCBbHQXW5MsyrFqPFcovkH9N2S/UW/H3H5AWAB6iEOExeraAu+j+zRDG+zg/D7YhH0qg==
 
 diffie-hellman@^5.0.0:
   version "5.0.3"
