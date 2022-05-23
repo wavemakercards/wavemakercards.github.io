@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "dexie": "^3.0.2",
+    "dexie": "^3.2.2",
     "dexie-export-import": "^1.0.0",
     "vue-file-tree": "github:robogeek/vue-file-tree",
     "vue-uuid": "^2.0.2",
