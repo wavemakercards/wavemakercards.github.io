@@ -368,7 +368,7 @@ $(document).off("click", "#saveCard").on("click", "#saveCard", function () {
   $('.modal-backdrop').remove();
 
   dosave()
-  drawNotes();
+  //drawNotes();
 })
 
 
@@ -388,7 +388,7 @@ $(document).off("click", ".deleteNoteCard").on("click", ".deleteNoteCard", funct
       kill = $(this).parent().parent().data().position;
       selectedNote.data.notes.splice(kill, 1)
       dosave()
-      drawNotes()
+      //drawNotes()
       swal(
         'Deleted!',
         'Your Card has been deleted.',
@@ -404,5 +404,5 @@ $(document).off("click", ".cardToggle").on("click", ".cardToggle", function () {
   selectedNote = $(this).parent().parent().data().position;
   selectedSection.data.notes[selectedNote].completed = !selectedSection.data.notes[selectedNote].completed;
   dosave()
-  drawNotes()
+  //drawNotes()
 })

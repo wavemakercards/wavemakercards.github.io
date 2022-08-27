@@ -24,7 +24,7 @@ var panelwidth;
 
 
 
-drawNotes()
+//drawNotes()
 
 
 function drawNotes(){
@@ -63,7 +63,7 @@ function drawNotes(){
         dropObj.startlist.data.notes.splice(dropObj.startpos, 1); //delete
       }
       dosave()
-      drawNotes()
+      //drawNotes()
 
     }
 }).disableSelection();

@@ -506,7 +506,7 @@ function drawNotes() {
                 dropObj.startlist.data.notes.splice(dropObj.startpos, 1); //delete
             }
             dosave()
-            drawNotes()
+            //drawNotes()
 
         }
     }).disableSelection();
@@ -543,7 +543,7 @@ function drawNotes() {
             if (result.value) {
                 k = $(this).parent().data("noteref");
                 CURRENTNODE.data.notes.splice(k, 1)
-                drawNotes()
+                //drawNotes()
                 dosave();
                 swal("Deleted!", "That has been deleted.", "success");
             }
@@ -565,7 +565,7 @@ function drawEditor() {
     $("#notesPanel").html("");
 
     $("#editor").addClass("manuscript")
-    drawNotes(CURRENTNODE.data)
+    //drawNotes(CURRENTNODE.data)
 
     nodetitle = $(
         "<div id='nodeNav' class='animated fadeInDown faster'><div id='editorbuttons'></div><div id='nodeTitle'><i class='" +

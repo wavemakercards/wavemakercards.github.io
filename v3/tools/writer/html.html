@@ -44,7 +44,7 @@
         font-size: 0.8em;
         top: 0px;
         left: 0px;
-        right: 50px;
+        right: 0px;
         bottom: 0px;
         transition: all 0.5s ease;
     }
@@ -94,7 +94,7 @@
     }
     
     #editpane {
-        padding: 10px;
+        padding: 5px;
         position: absolute;
         top: 100px;
         bottom: 0px;
@@ -105,9 +105,10 @@
     }
     
     #notesToggle {
-        width: 50px;
-        height: 50px;
+        width: 0px;
+        height: 0px;
         position: fixed;
+        display: none;
         right: 0px;
         top: 0px;
         border: 0px;
@@ -129,12 +130,13 @@
     
     #notesPanel {
         position: absolute;
-        right: -270px;
-        width: 320px;
+        display: none;
+        right: 0px;
+        width: 0px;
         top: 0px;
         bottom: 0px;
         background-color: var(--c9);
-        padding-left: 50px;
+        padding-left: 0px;
         overflow-y: auto;
         transition: all 0.5s;
     }
@@ -263,9 +265,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     
     @media (min-width: 768px) {
         #nodeText {
-            padding-left: 10%;
-            padding-right: 10%;
-            padding-top: 10%;
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-top: 4%;
         }
         .wysywig-btn {
             width: 50px;
@@ -275,9 +277,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     
     @media (min-width: 992px) {
         #nodeText {
-            padding-left: 10%;
-            padding-right: 10%;
-            padding-top: 10%;
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-top: 4%;
         }
     }
     /* Extra large devices (large desktops, 1200px and up) */
