@@ -27,13 +27,13 @@ $.each(manuscriptData, function(k,v){
 $(document).off("click","#ManuscriptSetStyle").on("click","#ManuscriptSetStyle", function(){
     if(!WMproject.data.settings.manuscript){
         WMproject.data.settings.manuscript = {};
-        WMproject.data.settings.manuscript.manuscriptFont="Halant";
+        WMproject.data.settings.manuscript.manuscriptFont="Noto Serif";
       WMproject.data.settings.manuscript.manuscriptAlign="left";
       WMproject.data.settings.manuscript.manuscriptFontSize="1.3rem";
       WMproject.data.settings.manuscript.manuscriptLineHeight="1.7rem";
-      WMproject.data.settings.manuscript.manuscriptParaIndent="20px";
+      WMproject.data.settings.manuscript.manuscriptParaIndent="0px";
       WMproject.data.settings.manuscript.manuscriptMarginBottom="20px";
-      WMproject.data.settings.manuscript.manuscriptPaperStyle="800px";
+      WMproject.data.settings.manuscript.manuscriptPaperStyle="100%";
       }
       WMproject.data.settings.manuscript.manuscriptFont=$("#manuscriptFont").val();  
       WMproject.data.settings.manuscript.manuscriptAlign=$("#manuscriptAlign").val();
@@ -46,7 +46,7 @@ $(document).off("click","#ManuscriptSetStyle").on("click","#ManuscriptSetStyle",
         console.log("Loading Font", WMproject.data.settings.manuscript.manuscriptFont)
       WebFont.load({
         google: { 
-               families: [WMproject.data.settings.manuscript.manuscriptFont] 
+               families: [WMproject.data.settings.manuscript.manuscriptFont]
          } 
       }); 
 
