@@ -1,0 +1,94 @@
+#snowflakeMain{
+position:absolute;
+top:0px;
+left:0px;
+right:0px;
+bottom:0px;
+padding-top:60px;
+padding-bottom: 30px;
+}
+
+.snowflakeContainer{
+  padding-top:60px;
+  padding-bottom: 30px;
+}
+
+.snowflakeAddButton{
+  display: block;
+  width:300px;
+margin:0 auto;
+  z-index:999999999;
+  padding:10px;
+  border:0px;
+  background-color: #424242;
+  color:#fff;
+}
+.snowflakeAddButton:hover{
+  cursor: pointer;
+  background-color: #636363;
+}
+
+.snowflakeCard{
+  margin-bottom: 20px;
+  width:100%;
+  position: relative;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=0, Color=#000000)";/*IE 8*/
+  -moz-box-shadow: 0 3px 10px -3px #000000;/*FF 3.5+*/
+  -webkit-box-shadow: 0 3px 10px -3px #000000;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 3px 10px -3px #000000;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color=#000000); /*IE 5.5-7*/
+  min-height: 200px;
+}
+
+.snowflakeCard>.wmcard-title{
+  border:0px;
+  width:100%;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  color:inherit;
+}
+
+.subcard1-title,.subcard2-title,.subcard3-title{
+  border:0px;
+  width:100%;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  color:inherit;
+}
+
+.parentButton{
+  position: absolute;
+  bottom:0px;
+  left:0px;
+  background: none;
+  border:0px;
+  padding-top:5px;
+  outline:none;
+}
+.parentButton:hover{
+  cursor:pointer;
+    outline:none;
+}
+.parentButton:focus,.parentButton:active{
+    outline:none;
+}
+
+
+.snowflakeTrigger{
+  position: absolute;
+  top:0px;
+  right:0px;
+  background: none;
+  border:0px;
+  outline:none;
+}
+
+.snowflakeTrigger:hover{
+  cursor:pointer;
+    outline:none;
+}
+.snowflakeTrigger:focus,.snowflakeTrigger:active{
+    outline:none;
+}

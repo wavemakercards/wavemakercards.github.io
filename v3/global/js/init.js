@@ -147,7 +147,7 @@ function loadtool (toolname) {
 }
 
 function InitialWC (dta) {
-  console.log("WC ",dta)
+  //console.log(dta)
   if (dta.data) {
     IntitalCount = IntitalCount + countWords(dta.data.content);
     if (dta.children !== undefined) {
@@ -184,6 +184,8 @@ function gatherStats () {
 
 }
 
+
+
 function countWords (str) {
   //console.log("counting");
   if (!str) {
@@ -201,8 +203,6 @@ function countWords (str) {
     return res;
   }
 }
-
-
 
 function setManuscript () {
 
@@ -237,6 +237,8 @@ function setManuscriptform () {
 
 function html2markdown (html) {
   var turndownService = new TurndownService();
+   html = html.replaceAll("---", "&mdash;");
+   html = html.replaceAll("--", "&ndash;");
   var markdown = turndownService.turndown(html);
   return markdown;
 }

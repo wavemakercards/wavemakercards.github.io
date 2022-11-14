@@ -1,0 +1,176 @@
+body {
+  background-color: #ffe0b2;
+  color: #424242;
+}
+.logo {
+  fill: #fff3e0;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ef6c00;
+}
+.modal-body,
+.modal-content {
+  background-color: #fff3e0;
+}
+#loadingScreen {
+  /*Just for Theming Colors*/
+  background-color: #e65100;
+  color: #fff3e0;
+}
+.addNewCard {
+  color: #fff3e0;
+}
+#EditorContainer {
+  margin-top: 20px;
+  background-color: #fff3e0;
+}
+.close {
+  color: #ef6c00;
+}
+.close:hover {
+  color: #e65100;
+}
+
+#CardModal {
+  color: #fff3e0;
+}
+.content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #fff3e0;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #e65100;
+}
+
+.content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff3e0;
+}
+
+#lhs_frame {
+  background-color: #ef6c00;
+}
+
+#center_frame {
+  background-color: #e0e0e0;
+}
+
+#rhs_frame {
+  background-color: #ef6c00;
+}
+
+#center_frame {
+  background-color: #ffe0b2;
+}
+.texteditor {
+  color: #424242;
+}
+
+.logo-top {
+  fill: #ef6c00;
+}
+.logo-bottom {
+  fill: #ffe0b2;
+}
+
+#saveAlert {
+  background-color: #fff3e0;
+  color: #e65100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#585858)"; /*IE 8*/
+  -moz-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*FF 3.5+*/
+  -webkit-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#585858); /*IE 5.5-7*/
+}
+
+#wordCount {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+#navsystem {
+  background-color: #ef6c00;
+}
+
+.navbtn {
+  background: #ef6c00;
+  color: #fff3e0;
+}
+.navbtn:hover {
+  background: #e65100;
+  color: #fff3e0;
+}
+
+.sideBtn {
+  background: #f57c00;
+  color: #fff3e0;
+}
+.sideBtn:hover {
+  background: #e65100;
+  color: #fff3e0;
+}
+
+.sidebar-nav {
+}
+
+.sidebar-nav li {
+  color: #fff3e0;
+}
+
+.sidebar-nav > li > i {
+}
+
+.sidebar-nav li:hover {
+  color: #fff3e0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+}
+
+.sidebar-nav > .sidebar-brand {
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #eeeeee;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff3e0;
+  background: none;
+}
+
+.deleteButton {
+  color: #fff;
+}
+.deleteCard {
+  color: #e65100;
+}
+
+.wmcard {
+  color: #424242;
+  border: 1px solid #f57c00;
+  background-color: #fff3e0;
+  /*    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#585858)";/*IE 8*/
+  /*  -moz-box-shadow: 0 0 20px 6px rgba(88,88,88,0.5);/*FF 3.5+*/
+  /*  -webkit-box-shadow: 0 0 20px 6px rgba(88,88,88,0.5);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  /*  box-shadow: 0 0 20px 6px rgba(88,88,88,0.5);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  /*  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#585858); /*IE 5.5-7*/
+}
+
+.markAsDone {
+  background-color: #ef6c00;
+  color: #fff3e0;
+}
+.markAsDone .smallButtons {
+  color: #fff3e0;
+}
+.markAsDone .deleteCard {
+  color: #fff3e0;
+}
+
+.smallButtons {
+  color: #e65100;
+}

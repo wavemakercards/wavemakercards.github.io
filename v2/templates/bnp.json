@@ -1,0 +1,789 @@
+{
+   "writer":{
+      "C1528714826760760":{
+         "title":"Chapter 1",
+         "bodytext":"",
+         "cards":{
+            "card_152871547902323":{
+               "cardtype":"Note Card",
+               "cardtext":"This  template is based heavily off the betternovelproject.com outline. Its is  a fascinating study of Harry Potter, Twilight and the Hunger Games.  It pull together common themes and events you can use to help you structure your novel.\n\nIt is not *required* but may help you get started. You can EDIT or DELETE any of these cards as well as add more to help you plan out your novel as well.\n\nMake sure you visit  www.betternovelproject.com as it will give you a lot of tips and hints along the way",
+               "position":0,
+               "completed":false
+            },
+            "card_1528714877539539":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce your hero. Cover age, body type, hair and eye color through meaningful description",
+               "position":1,
+               "completed":false
+            },
+            "card_1528716365410410":{
+               "cardtype":"Symbol Card",
+               "cardtext":"'Dreary Homeland'  Where your hero currently resides should be (at least to their eyes) a dreary place. ",
+               "position":2
+            },
+            "card_1528714940172172":{
+               "cardtype":"Character Card",
+               "cardtext":"Your Hero's parents should be unavailable (dead/missing/uninterested) Describe how this came to be and affects the hero's life.",
+               "position":3
+            },
+            "card_1528715033358358":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce the EVERYDAY GOAL of the hero. What is important to them at the start of the story. This will need to be affected by the villain",
+               "position":4
+            },
+            "card_1528715062921921":{
+               "cardtype":"Character Card",
+               "cardtext":"Explain how Hero’s life is missing love/friendship/care. Use examples for this",
+               "position":5
+            },
+            "card_1528715122401401":{
+               "cardtype":"Scene Card",
+               "cardtext":"Open on a bittersweet celebration day.  The celebration should be filled with love, shown by one character’s willingness to sacrifice their self for another.   The celebration should also imply the possibility of the Hero’s death by an evil force.",
+               "position":6
+            },
+            "card_1528715255117117":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce the Villain/Looming threat.  Make sure that there is foreshadowing of the threat to come.",
+               "position":7
+            },
+            "card_1528715302184184":{
+               "cardtype":"Theme Card",
+               "cardtext":"Show that the hero is 'poor' socioeconomic tensions is a common theme you can resort to throughout the story",
+               "position":8
+            },
+            "card_1528715339137137":{
+               "cardtype":"Character Card",
+               "cardtext":"Briefly describe the hero's clothing as an introduction.",
+               "position":9
+            },
+            "card_1528715368209209":{
+               "cardtype":"Symbol Card",
+               "cardtext":"The hero should be 'marked' by an actual symbol. ",
+               "position":10
+            }
+         },
+         "active":0,
+         "position":0
+      },
+      "C1528715499677677":{
+         "title":"Chapter 2",
+         "bodytext":"",
+         "cards":{
+            "card_1528715554735735":{
+               "cardtype":"Scene Card",
+               "cardtext":"Tell us about a  'day in the life' of your hero, taking part in a pleasant, normal errand",
+               "position":0
+            },
+            "card_1528715614902902":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce your 'Checkov's Gun' . The hero discovers their special skill or reveals their unique personality trait.",
+               "position":1
+            },
+            "card_1528716068160160":{
+               "cardtype":"Scene Card",
+               "cardtext":"Have a scene where your hero prepares food. It is a good way to show self-reliance and maturity. The type of food can tell a lot (i.e. Hunger Games - Katniss has to hunt for the food- shows the desperate circumstances )",
+               "position":2
+            },
+            "card_1528716229790790":{
+               "cardtype":"Plot Card",
+               "cardtext":"Introduce  The HERALD\nThe Herald is not necessarily a person. It is any person/event that causes the 'call to adventure'\nRaise the stakes for their hero by sending them on an adventure right away, without too much set-up.  At the same time, they ease the transition between the everyday and the magical by offering a peek into the past and an introduction to the future. ",
+               "position":4
+            },
+            "card_1528716304657657":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce the MENTOR\nThe mentor ushers the hero from the 'Dreary homeland' to the 'awful-awesome' world.\n\nSome Traits the MENTOR can have \n1. The Mentor was Once in the Hero’s Position\n2. The Mentor Appears Disheveled\n3. The Mentor is a Misfit of Society\n4. The Mentor Lives Separately from the Other Characters\n5. The Mentor Drinks More than Any Other Character\n6. Everyone knows the Mentor\n7. The Mentor is Charged with Keeping the Hero Alive\n8. The Mentor Is Not Very Reliable\n9. The Mentor Forces the Hero to Acknowledge He is Talented\n10. The Hero Trusts the Mentor",
+               "position":5
+            },
+            "card_1528719944714714":{
+               "cardtype":"Scene Card",
+               "cardtext":"Hero receives invitation for adventure\n\nNow that the invitation has brought some excitement into the story, use the hero’s reaction to the invitation to fill in the reader on the hero’s current home and relationships.",
+               "position":3
+            }
+         },
+         "active":0,
+         "position":1
+      },
+      "C1528719983662662":{
+         "title":"Chapter 3",
+         "bodytext":"",
+         "cards":{
+            "card_1528720165823823":{
+               "cardtype":"Scene Card",
+               "cardtext":"The Hero takes a short trip to an 'example' Awful-Awesome Land.\n\nQuestion 1: Where are we going?\nQuestion 2: What the $&*% is that?\nQuestion 3: Is that a threat?\nQuestion 4: Will that come back to haunt me?",
+               "position":0
+            },
+            "card_1528720199289289":{
+               "cardtype":"Character Card",
+               "cardtext":"Mentor takes hero to get supplies\n\nBefore the hero gets too deep in his adventures, the mentor first takes him to pick up some supplies. This is a classic scene in the monomythical hero’s journey.",
+               "position":1
+            },
+            "card_1528720231294294":{
+               "cardtype":"Scene Card",
+               "cardtext":"The hero says goodbye to their family.",
+               "position":2
+            },
+            "card_1528720261184184":{
+               "cardtype":"Scene Card",
+               "cardtext":"Hero boards mass transit to awful-awesome land",
+               "position":3
+            },
+            "card_1528720272463463":{
+               "cardtype":"Theme Card",
+               "cardtext":"socioeconomic tension (show the hero embarrassed or mocked for being poor)",
+               "position":4
+            },
+            "card_1528720315635635":{
+               "cardtype":"Theme Card",
+               "cardtext":"Racial or ethnic tension between groups should be highlighted here as well.",
+               "position":5
+            },
+            "card_1528720381642642":{
+               "cardtype":"Plot Card",
+               "cardtext":"CLUE 1\nIf you want to write a page-turner, drop the first clue of your mystery in the pre-middle. The reader will be dying to find out what happens next.",
+               "position":6
+            },
+            "card_1528720504425425":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce the HEALER\nThe healer character in a YA adventure story is competent, authoritative, and level-headed. The healer is a minor character who the main characters can lean on– this means that the healer doesn’t experience personal growth themselves.\n\n1. The healer allows other characters to take dangerous risks.\nNaturally, the characters are going to get hurt along the way. The presence of the healer allows the characters to brush themselves off and continue on the journey.\n\n2. The healer helps to build mystery and suspense.\nSometimes, a character has something to hide from the healer. Since the two characters are forced to interact when the character is injured, this helps build conflict.\n\n3. The healer gives a flat character more depth.\nBy combining a caregiver character with the healer archetype, an otherwise bland mom and dad become much more interesting.\n\n4. The availability of a healer adds comic relief.\nIf a character can be quickly patched up, his frequent injuries will appear more humorous.\n\n5. The healer traps characters together.\nLike #2 above, the healer can also force conflict by forcing other characters together in the hospital setting. Because the healer has a lot of authority, the characters must follow her instructions and stay put.\n\n6. The healer forces another character to save the day.\nWhen the climax arrives, the healer instructs another character about lifesaving skills, but doesn’t save the day herself. This allows a more dynamic character to experience personal growth and triumph.\n\n7. The healer highlights an ideal that the hero cannot meet.\nThe healer’s sense of calm and contentment is a direct contrast to the YA heroine, who is struggling to find her way. The healer’s presence shows the imperfection of the heroine and the room she has to grow.",
+               "position":7
+            },
+            "card_1528720549633633":{
+               "cardtype":"Symbol Card",
+               "cardtext":"Other characters recognize hero because of their “mark”",
+               "position":8
+            }
+         },
+         "active":0,
+         "position":2
+      },
+      "C1528721533371371":{
+         "title":"Chapter 4",
+         "bodytext":"",
+         "cards":{
+            "card_1528721562794794":{
+               "cardtype":"Symbol Card",
+               "cardtext":"Introduce element of magic/fantasy/sci-fi\n\nReduced to its most basic form, I think a novel will have a better chance of being successful if it is a suspenseful, action-filled story starring a young adult hero and his or her out-of-this-world experiences.",
+               "position":0
+            },
+            "card_1528721648864864":{
+               "cardtype":"Scene Card",
+               "cardtext":"The MENTOR Challenges authority\n\nWe already know that the mentor is a bit of a misfit. We see this trait in action when he speaks poorly about authority figures in front of the hero.",
+               "position":1
+            },
+            "card_1528721757744744":{
+               "cardtype":"Theme Card",
+               "cardtext":"Death (fight for survival)\nIf you want your YA novel to mean something beyond puppy love and schoolyard woes, try weaving in a theme of death through survival, sacrifice, and immortality.\n\n1.  Explore Immortality\n2.  Decide to Fight Death\n3.  Get Philosophical with Death\n4.  Choose to Accept Fate\n5.  Make the Sacrifice for Love",
+               "position":2
+            },
+            "card_1528721816320320":{
+               "cardtype":"Symbol Card",
+               "cardtext":"The hero changes clothes to establish a new threshold’s uniform as part of moving to the Awful-awesome land",
+               "position":3
+            },
+            "card_1528721862543543":{
+               "cardtype":"Scene Card",
+               "cardtext":"Hero receives backstory through questions\nMore of these.\nQuestion 1: Where are we going?\nQuestion 2: What the $&*% is that?\nQuestion 3: Is that a threat?\nQuestion 4: Will that come back to haunt me?",
+               "position":4
+            },
+            "card_1528721934151151":{
+               "cardtype":"Plot Card",
+               "cardtext":"Hero learns something that foreshadows the climax",
+               "position":5
+            }
+         },
+         "active":0,
+         "position":3
+      },
+      "C1528721946231231":{
+         "title":"Chapter 5",
+         "bodytext":"",
+         "cards":{
+            "card_1528722039909909":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #1 (WIN): social acceptance “ceremony”\n\n1.  Hold a ceremony.\nThe hero has just left his homeland, taken a short trip, and now arrived in a new strange place. His arrival is marked by a public ceremony.\n\n2.  Make the hero nervous about the ceremony.\nEven though it’s a ceremony of sorts, the hero is not looking forward to it all! The idea of being judged in front of all his peers makes the hero dread the upcoming event.\n\n3.  Force the hero to wait.\nThe hero’s anticipation is only worsened when he is forced to wait– he may have to get in line, or he may have to watch from the sidelines as his friends are called up before him, one by one.\n\n4.  Send the hero some self-doubt.\nLike any good teenager who is nervous about a big event, the hero starts to imagine the worst. The hero is generally a loner so this ceremony centered around social acceptance is especially hard for him.\n\n5.  The hero has to be someone he is not.\nWith all this self-doubt, the hero feels like he has to be someone else to be socially accepted– this might require a few white lies.\n\n6. The hero cannot focus.\nWhether during the event or the preparation for it, the hero is too full of nerves to focus. It all goes by in a blur.\n\n7.  The hero gets frustrated.\nDuring the preparation for the event, the hero expresses frustration– perhaps with the repetitiveness of it all.\n\n8.  Someone gives the hero approval.\nAnother character takes the time to appreciate the hero’s greatness, which may ease their feelings during the ceremony.\n\n9. Throw the hero a curve ball.\nThe hero is so focused on being nervous about the ceremony, that he is totally unprepared when the unexpected happens.",
+               "position":0
+            },
+            "card_1528722150406406":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce the WISE ONE\n\nThe hero thinks he can handle any adventure on his own.  (Duh, he’s a teenager.)  But there’s one authority he actually respects, and that’s the voice of the “Wise One.”  This archetype is effective because the reader is left begging the hero not to let the Wise One down \n\n1.  The Wise One radiates goodness. \n2. The Wise One is very perceptive, bordering on “all-knowing.”\n3. The Wise One encourages the hero.\n4. The Wise One gives good advice.\n5. The Wise One calms the hero.\n6. The Wise One is protective of the hero.\n7. The Wise One encourages honesty but is not sure if the hero is ready for the truth.\n*Bonus: The Wise One gives the hero something to wear.",
+               "position":1
+            },
+            "card_1528722187438438":{
+               "cardtype":"Symbol Card",
+               "cardtext":"The Hero shares someones jacket",
+               "position":2
+            },
+            "card_1528722241361361":{
+               "cardtype":"Scene Card",
+               "cardtext":"The hero gets some advice on entering or surviving the new world.",
+               "position":3
+            },
+            "card_1528722273287287":{
+               "cardtype":"Theme Card",
+               "cardtext":" Good vs. Evil (hero doesn’t know whom to trust)",
+               "position":4
+            },
+            "card_1528722307329329":{
+               "cardtype":"Scene Card",
+               "cardtext":"Hero anticipates danger\nThe pre-middle should foreshadow the events of the climax. This will make the ending more satisfying, because we should have seen it coming all along",
+               "position":5
+            },
+            "card_1528722320307307":{
+               "cardtype":"Symbol Card",
+               "cardtext":"The hero’s “mark” represents his lost parent’s protection",
+               "position":6
+            }
+         },
+         "active":0,
+         "position":4
+      },
+      "C1528722348213213":{
+         "title":"Chapter 6",
+         "bodytext":"",
+         "cards":{
+            "card_1528722437790790":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial 2  #WIN\n\nAnother trial for the hero to overcome to progess\n",
+               "position":0
+            },
+            "card_1528722582764764":{
+               "cardtype":"Character Card",
+               "cardtext":"Introduce SIDEKICK\n\n1. The sidekick timidly meets the hero early on the journey.\n2.  The sidekick sticks out from the crowd.\n3.  The sidekick is one of many kids from a poor family.\n4.  The hero is interested in the sidekick’s background.\n5.  The sidekick accepts food from the hero.\n6.  The sidekick and the hero fall asleep near each other.\n7.  The hero receives a gift from the sidekick’s home.",
+               "position":1
+            },
+            "card_1528722623989989":{
+               "cardtype":"Scene Card",
+               "cardtext":"Hero enjoys some strange food - a way of highlighting the differences between lands.",
+               "position":2
+            },
+            "card_1528722639115115":{
+               "cardtype":"Scene Card",
+               "cardtext":"The hero is the reluctant center of attention (everyone stares)",
+               "position":3
+            },
+            "card_152872284702424":{
+               "cardtype":"Character Card",
+               "cardtext":"The Bully\n\nThe Bully is a minor everyday threat.\nThe bully isn’t such hot stuff when he’s alone. He needs to demonstrate his control even on his closest friends.\nBullying involves an imbalance of power. The bully exploits his socioeconomic status, popularity, or physical strength to control others.\n\n1. Describe the bully’s looks and voice with the worst adjectives\n2.  The bully doesn’t just speak, he sneers and growls\n3.  Arm the bully with a faithful posse\n4.  Give the bully some sort of advantage over the hero\n5. The bully shoots dirty looks, scowls, and glances at the hero\n6. The bully uses sarcasm\n7. The bully threatens and provokes the hero\n8. The bully has a reason to dislike the hero\n",
+               "position":4
+            },
+            "card_1528722935888888":{
+               "cardtype":"Location Card",
+               "cardtext":"The Cafeteria is a great go to location for these reasons.\n\n1. The cafeteria setting opens a scene naturally.\n2. The cafeteria signals the passage of time on a small, daily scale.\n3. The cafeteria shows the passage of time on a large, seasonal scale.\n4. The cafeteria is a transitional setting between bigger scenes.\n5. The cafeteria is a place where the characters make plans for a bigger event.\n6. The cafeteria setting provides a natural end to scenes.",
+               "position":5
+            },
+            "card_1528722956729729":{
+               "cardtype":"Theme Card",
+               "cardtext":"revisit racial or ethnic tension between groups",
+               "position":6
+            }
+         },
+         "active":0,
+         "position":5
+      },
+      "C1528723533629629":{
+         "title":"Chapter 7",
+         "bodytext":"",
+         "cards":{
+            "card_1528723641640640":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #4 (DRAW)\nThe hero must complete some sort of assignment for a teacher or evaluator, and her temper flares as a result.\n\n1.  Call the hero’s name.\nThe time for the evaluation or test is signaled by the teacher or another student calling the hero’s name. It’s easy for readers to connect with the anxiety of being singled out in class.\n\n2.  Describe the spectators.\nWhile in the classroom or evaluation area, the hero notes the noise and the attention-span of the people who are present. This small details reinforces that the hero’s risk of embarrassment is high.\n\n3.  Divide the class into groups to tackle an assignment.\nBy splitting the class into partners or groups, the reader doesn’t get bored just listening to a lecture. The characters have a chance to talk amongst themselves as they work.\n\n4.  Put pressure on the hero to answer correctly.\nNow it’s time for put the hero to the test. The teacher or evaluator throws a real challenge at the hero.\n\n5.  Let the hero feel embarrassed.\nWhen the hero doesn’t immediately perform well, he is humiliated in front of the spectators.\n\n6.  Send the hero some support from a friend.\nNot everyone is laughing at the hero. Luckily, he has a friend to watch his back.\n\n7.  Evaluate the performance.\nWhile the hero is struggling under the pressure to not look dumb, the teacher is always watching him so there is no chance to relax.\n\n8.  Challenge the hero’s final results.\nAfter the hero has completed the assignment, the teacher is somewhat confused by the results. The teacher’s reaction makes the hero want to lash out.\n\n9.  Make a smart-mouthed remark.\nThe hero can’t be picked on for too long. At some point, his will breaks down and he gets sassy with another character.\n\n10.  Send the hero some regret.\nAfter the incident, the hero can’t stop thinking about it for the rest of the day. Depending on how rashly he acted, he may feel even more embarrassed now.",
+               "position":0
+            },
+            "card_1528723771173173":{
+               "cardtype":"Character Card",
+               "cardtext":"Hero's everyday goal overshadowed by threat from Villain; goal priority moves to survival",
+               "position":1
+            },
+            "card_1528723800490490":{
+               "cardtype":"Character Card",
+               "cardtext":"The sidekick acts as magical guide; the sidekick and the hero have  a sleepover",
+               "position":2
+            },
+            "card_152872381104747":{
+               "cardtype":"Scene Card",
+               "cardtext":"Wake hero up with a foreshadowing nightmare.",
+               "position":3
+            },
+            "card_1528723822250250":{
+               "cardtype":"Scene Card",
+               "cardtext":"Star-Crossed Lovers (introduce antagonistic attraction/love interest)",
+               "position":4
+            },
+            "card_1528723835706706":{
+               "cardtype":"Symbol Card",
+               "cardtext":"Use music to show magical elements, humor, authority, beauty, or a celebration",
+               "position":5
+            },
+            "card_1528725124783783":{
+               "cardtype":"Character Card",
+               "cardtext":"Secret Good Guy\n\nA Character who appears to be a threat but is really on the Hero's side (think Snape, Peeta etc..)",
+               "position":6
+            }
+         },
+         "active":0,
+         "position":6
+      },
+      "C1528723151408408":{
+         "title":"Chapter 8",
+         "bodytext":"",
+         "cards":{
+            "card_1528723260629629":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #4 (DRAW)\n\nAnother non threatening challenge\n",
+               "position":0
+            },
+            "card_15287232770011":{
+               "cardtype":"Character Card",
+               "cardtext":"Another character praises the hero’s talent and good looks\n\nhero doesn’t recognize his talent or good looks",
+               "position":1
+            },
+            "card_152872329806363":{
+               "cardtype":"Scene Card",
+               "cardtext":"Force the hero to spend time with the love interest",
+               "position":2
+            },
+            "card_1528723314110110":{
+               "cardtype":"Location Card",
+               "cardtext":"Cafeteria Setting to review",
+               "position":4
+            },
+            "card_1528723325158158":{
+               "cardtype":"Character Card",
+               "cardtext":"The SHAPESHIFTER\n\nThe Shapeshifter archetype is hard to describe by its very nature but in essence it acts to bring \nuncertainty and tension into a story, by changing appearance, mood, or behavior. In a romance, the hero and heroine can both be shapeshifters, adapting as external and internal demands require.\n\nSecondary characters may be Shapeshifters as well, turning from Mentor to Herald to Trickster to Villain and back through the cycle in turn. Shapeshifters can reflect the protagonist's unspoken desire for transformation, and successful dealings with such shifters can result in new understanding of the opposite sex or restrained energies within themselves.\n\nThe other woman is an example of a shapeshifter archetype which has become so overused as to become cliche, or stereotype. While femme fatales are out of favor in our genre, perhaps we will see a growing occurrence of homme fatales?\n\nThe paranormal subgenre allows for a more blatant version of this archetype, where a major character might physically change into a wolf, vampire or angel. Within the subgenre, such changes are accepted by readers along with the emotional and integral changes of more mundane characters.\n\nRegardless, a shapeshifter's job is usually to dazzle, confuse, lie to, occasionally help and delay a protagonist. If your heroine is constantly wondering whether a subcharacter is friend or foe, and \"Just whose side is she on this week?\" you can be sure you have a shapeshifter in your cast of characters. (And the answer to the question is \"On their own side, of course!\")",
+               "position":3
+            }
+         },
+         "active":0,
+         "position":7
+      },
+      "C1528723867241241":{
+         "title":"Chapter 9",
+         "bodytext":"",
+         "cards":{
+            "card_1528723900520520":{
+               "cardtype":"Scene Card",
+               "cardtext":" Trial #5 (WIN)\n\nGive your Hero a bit of success!",
+               "position":0
+            },
+            "card_1528723917382382":{
+               "cardtype":"Character Card",
+               "cardtext":"The sidekick acts as magical guide explaining more",
+               "position":1
+            },
+            "card_1528723954147147":{
+               "cardtype":"Character Card",
+               "cardtext":"The Mentor (receives help from hero)\nEven though the mentor is supposed to help the hero, we know that the mentor is not all that reliable. Sometimes, when the mentor indulges in his weakness, he needs help from the hero (and the hero’s friends).",
+               "position":2
+            },
+            "card_1528723982533533":{
+               "cardtype":"Character Card",
+               "cardtext":"The Hero breaks some rules\n\nWhen writing a teenage hero’s backstory, take your cue from James Dean: think loner, rule-breaker, & tortured heartthrob.  Despite almost 50 years since the premier of Rebel Without A Cause, James Dean still embodies a modern feeling of teenage rebellion.  A tough hero with a troubled past will be better prepared to handle any adventure, and the friendship that develops along the way will mean more to him.",
+               "position":3
+            },
+            "card_1528723985190190":{
+               "cardtype":"Character Card",
+               "cardtext":"hero is a talented athlete (and changes clothes when playing sports) ",
+               "position":4
+            },
+            "card_1528724004968968":{
+               "cardtype":"Scene Card",
+               "cardtext":"love interest Q&A session (if you have one)\n\nDeny how attracted you are to each other.\nTake a turn for the antagonistic.\nFind a way to be forced together.\nGet to know her through contrived questions.\nRecount the first time you saw her.\nAdd a dash of jealousy.\nGo back to gazing at her.\nHave a sleepy sleepover.\nDeclare your love for her.",
+               "position":5
+            },
+            "card_1528724015480480":{
+               "cardtype":"Scene Card",
+               "cardtext":"*female character trait: \nthe main female character cries alone\n\nThe 3 Worst Traits of the YA Heroine\n1.  She flirts to get what she wants\n2.  She hurts people to get what she wants\n3.  She tries to hide her tears",
+               "position":6
+            }
+         },
+         "active":0,
+         "position":8
+      },
+      "C1528724518200200":{
+         "title":"Chapter 10",
+         "bodytext":"",
+         "cards":{
+            "card_152872455203939":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #6 (DRAW)",
+               "position":0
+            },
+            "card_1528724561689689":{
+               "cardtype":"Scene Card",
+               "cardtext":"hero’s family/friends reject her when she chooses to go after Villain; Hero cannot explain situation to them",
+               "position":1
+            },
+            "card_1528724568706706":{
+               "cardtype":"Scene Card",
+               "cardtext":"hero has a sleepless, stressful night.",
+               "position":2
+            },
+            "card_1528724584545545":{
+               "cardtype":"Symbol Card",
+               "cardtext":"Ancient myth\n\nThe use of a familiar myth helps make the magic more plausible because you already have practice in imagining these fantastic gods and creatures.  They already exist in our communal memory, and I think we are just as eager as the YA hero to make the leap and believe that the magic is real.",
+               "position":3
+            },
+            "card_1528724590711711":{
+               "cardtype":"Theme Card",
+               "cardtext":"Good vs. Evil (the hero conflicts with good authority figures)",
+               "position":4
+            },
+            "card_152872460404747":{
+               "cardtype":"Location Card",
+               "cardtext":"The cafeteria",
+               "position":5
+            }
+         },
+         "active":0,
+         "position":9
+      },
+      "C1528724681592592":{
+         "title":"Chapter 11",
+         "bodytext":"",
+         "cards":{
+            "card_1528724720301301":{
+               "cardtype":"Character Card",
+               "cardtext":"The sidekick and the hero are compared athletically\nEveryone knows that the hero is a better competitive athlete than the sidekick after the two are compared against each other in some way.",
+               "position":0
+            },
+            "card_1528724737281281":{
+               "cardtype":"Theme Card",
+               "cardtext":"Socioeconomic status (show the hero resenting or lashing out at someone wealthier)",
+               "position":1
+            },
+            "card_1528724768278278":{
+               "cardtype":"Plot Card",
+               "cardtext":"Mentor (withholds information)\nThe mentor is on the hero’s side, but he’s not always entirely forthcoming. This provides tension and helps blur the lines between good guys and bad guys.",
+               "position":2
+            },
+            "card_1528724797740740":{
+               "cardtype":"Scene Card",
+               "cardtext":"(Trial #7 (WIN)) the hero is rescued by a minor character",
+               "position":3
+            },
+            "card_152872481702727":{
+               "cardtype":"Scene Card",
+               "cardtext":"The hero eavesdrops and makes a bad assumption",
+               "position":4
+            }
+         },
+         "active":0,
+         "position":10
+      },
+      "C1528724864744744":{
+         "title":"Chapter 12",
+         "bodytext":"",
+         "cards":{
+            "card_1528724880633633":{
+               "cardtype":"Symbol Card",
+               "cardtext":"the hero changes clothes prior to obstacle",
+               "position":0
+            },
+            "card_152872489003838":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #8 (DRAW) : hero is in the air; secret good guy is on the ground\n\n1. Prior to this scene, the hero believes the secret good guy is bad.\n2. The hero is up high in the sky.\n3. The hero has some downtime and shows off.\n4. The secret good guy is on the ground.\n5. The real bad guys “pelt stones” at the hero.\n6. The hero’s friend attempts to help.\n7. The hero is helped at the secret good guy’s expense.\n8. This help causes the hero to come down safely.\n9. The secret good guy’s status remains in question for the rest of the novel (and entire series).",
+               "position":1
+            },
+            "card_1528724900416416":{
+               "cardtype":"Character Card",
+               "cardtext":"The sidekick protects the hero from future harm\nThe hero may be eager to shoot from the hip, but the sidekick is better at anticipating danger.",
+               "position":2
+            },
+            "card_1528724907536536":{
+               "cardtype":"Scene Card",
+               "cardtext":"The hero has a horrific vision.\nEach hero experiences visions, whether from memories, shock or poison.  The vision is another way to express the hero’s worst fears.",
+               "position":3
+            },
+            "card_1528724919476476":{
+               "cardtype":"Symbol Card",
+               "cardtext":"The hero’s “mark” warns him of danger",
+               "position":4
+            }
+         },
+         "active":0,
+         "position":11
+      },
+      "C1528725820805805":{
+         "title":"Chapter 13",
+         "bodytext":"",
+         "cards":{
+            "card_1528725835851851":{
+               "cardtype":"Character Card",
+               "cardtext":"the sidekick acts as magical guide",
+               "position":0
+            },
+            "card_1528725842728728":{
+               "cardtype":"Character Card",
+               "cardtext":"Mentor (sends hero message)",
+               "position":1
+            },
+            "card_1528725851345345":{
+               "cardtype":"Scene Card",
+               "cardtext":"(Trial #9 (FAIL)) the hero attempts to rescue a friend.",
+               "position":2
+            },
+            "card_1528725859266266":{
+               "cardtype":"Theme Card",
+               "cardtext":"death (philosophically questioning death)",
+               "position":3
+            }
+         },
+         "active":0,
+         "position":12
+      },
+      "C1528725861527527":{
+         "title":"Chapter 14",
+         "bodytext":"",
+         "cards":{
+            "card_152872588209494":{
+               "cardtype":"Scene Card",
+               "cardtext":"(Trial #10 (DRAW)) the hero plays hide-n-seek with the villain’s henchmen",
+               "position":0
+            },
+            "card_1528725890510510":{
+               "cardtype":"Character Card",
+               "cardtext":"Mentor (gives gift)",
+               "position":1
+            },
+            "card_152872589808383":{
+               "cardtype":"Character Card",
+               "cardtext":"The Shapeshifter",
+               "position":2
+            },
+            "card_1528725907175175":{
+               "cardtype":"Theme Card",
+               "cardtext":"Good vs. Evil (other good characters conflict with each other)",
+               "position":3
+            },
+            "card_1528725915463463":{
+               "cardtype":"Scene Card",
+               "cardtext":"sweet make-out session (first kiss)",
+               "position":4
+            }
+         },
+         "active":0,
+         "position":13
+      },
+      "C1528725919894894":{
+         "title":"Chapter 15",
+         "bodytext":"",
+         "cards":{
+            "card_1528725939966966":{
+               "cardtype":"Scene Card",
+               "cardtext":"scene card: Trial #11 (WIN) (hero trait: demonstrate “Chekhov’s Gun“)",
+               "position":0
+            },
+            "card_1528725946772772":{
+               "cardtype":"Character Card",
+               "cardtext":"the sidekick’s family/hometown sends hero a gift",
+               "position":1
+            },
+            "card_1528725953612612":{
+               "cardtype":"Character Card",
+               "cardtext":"Mentor (helps hero’s friend)",
+               "position":2
+            },
+            "card_1528725964645645":{
+               "cardtype":"Scene Card",
+               "cardtext":"hero risks life to protect her family/friends from Villain",
+               "position":3
+            },
+            "card_1528725976479479":{
+               "cardtype":"Symbol Card",
+               "cardtext":"use music as a symbol to show care, show connection, solve a problem, or trigger a memory",
+               "position":4
+            }
+         },
+         "active":0,
+         "position":14
+      },
+      "C1528725986887887":{
+         "title":"Chapter 16",
+         "bodytext":"",
+         "cards":{
+            "card_1528726001630630":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #12 (FAIL/DRAW) the hero incapacitates a friend.",
+               "position":0
+            },
+            "card_1528726008871871":{
+               "cardtype":"Scene Card",
+               "cardtext":"hero lies to protect someone (withholds information)",
+               "position":1
+            },
+            "card_1528726017848848":{
+               "cardtype":"Location Card",
+               "cardtext":"dark/enchanted forest setting",
+               "position":2
+            },
+            "card_1528726027432432":{
+               "cardtype":"Theme Card",
+               "cardtext":"Good vs. Evil (the villain cannot control every bad guy)",
+               "position":3
+            },
+            "card_1528726038704704":{
+               "cardtype":"Character Card",
+               "cardtext":"female character trait: the heroine flirts to receive information ",
+               "position":4
+            },
+            "card_1528726050549549":{
+               "cardtype":"Symbol Card",
+               "cardtext":"the hero’s “mark” represents survival as an act of rebellion",
+               "position":5
+            }
+         },
+         "active":0,
+         "position":15
+      },
+      "C152872606105252":{
+         "title":"Chapter 17",
+         "bodytext":"",
+         "cards":{
+            "card_1528726077385385":{
+               "cardtype":"Scene Card",
+               "cardtext":"(Trial #13 (WIN)) the hero is rescued by a major character",
+               "position":0
+            },
+            "card_1528726084673673":{
+               "cardtype":"Character Card",
+               "cardtext":"hero can’t ask for help (withholds information) ",
+               "position":1
+            },
+            "card_152872609107272":{
+               "cardtype":"Scene Card",
+               "cardtext":"hero sleeps next to the love interest",
+               "position":2
+            },
+            "card_1528726098298298":{
+               "cardtype":"Theme Card",
+               "cardtext":"Good vs. Evil (society turns on the hero)",
+               "position":3
+            },
+            "card_1528726105439439":{
+               "cardtype":"Character Card",
+               "cardtext":" the Healer",
+               "position":4
+            }
+         },
+         "active":0,
+         "position":16
+      },
+      "C1528726110213213":{
+         "title":"Chapter 18",
+         "bodytext":"",
+         "cards":{
+            "card_1528726126839839":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #14 (WIN) the hero passes the Gatekeeper",
+               "position":0
+            },
+            "card_1528726134333333":{
+               "cardtype":"Scene Card",
+               "cardtext":"Trial #15 (WIN) (hero trait: fire “Chekhov’s Gun“)",
+               "position":1
+            },
+            "card_1528726141161161":{
+               "cardtype":"Character Card",
+               "cardtext":" the sidekick is badly hurt",
+               "position":2
+            },
+            "card_1528726150284284":{
+               "cardtype":"Symbol Card",
+               "cardtext":"ancient myth",
+               "position":3
+            },
+            "card_1528726157426426":{
+               "cardtype":"Theme Card",
+               "cardtext":"death (immortality)",
+               "position":4
+            },
+            "card_1528726165200200":{
+               "cardtype":"Character Card",
+               "cardtext":"female character trait: the heroine emotionally manipulates someone",
+               "position":5
+            }
+         },
+         "active":0,
+         "position":17
+      },
+      "C1528726169424424":{
+         "title":"Chapter 19",
+         "bodytext":"",
+         "cards":{
+            "card_1528726183648648":{
+               "cardtype":"Scene Card",
+               "cardtext":" final battle in villain’s lair; twist revealed; villain explains himself",
+               "position":0
+            },
+            "card_1528726193190190":{
+               "cardtype":"Scene Card",
+               "cardtext":"TKO, wakes up in hospital, asks what happened, gets cover story",
+               "position":1
+            },
+            "card_1528726202654654":{
+               "cardtype":"Scene Card",
+               "cardtext":"love interest declares love for hero",
+               "position":2
+            },
+            "card_1528726207552552":{
+               "cardtype":"Character Card",
+               "cardtext":"Mentor (emotional reunion)",
+               "position":3
+            },
+            "card_152872621304848":{
+               "cardtype":"Character Card",
+               "cardtext":"the Wise One",
+               "position":4
+            }
+         },
+         "active":0,
+         "position":18
+      },
+      "C1528726217367367":{
+         "title":"Chapter 20",
+         "bodytext":"",
+         "cards":{
+            "card_1528726232656656":{
+               "cardtype":"Symbol Card",
+               "cardtext":"the hero changes back in to clothes of homeland",
+               "position":0
+            },
+            "card_1528726239885885":{
+               "cardtype":"Theme Card",
+               "cardtext":"death (acceptance of fate / sacrifice for love)",
+               "position":1
+            }
+         },
+         "active":0,
+         "position":19
+      },
+      "C1528726242486486":{
+         "title":"Chapter 21",
+         "bodytext":"",
+         "cards":{
+            "card_1528726262833833":{
+               "cardtype":"Scene Card",
+               "cardtext":"ending with closure that hints at a continued threat",
+               "position":0
+            },
+            "card_1528726269608608":{
+               "cardtype":"Character Card",
+               "cardtext":"Mentor (returns hero home)",
+               "position":1
+            }
+         },
+         "active":0,
+         "position":20
+      }
+   },
+   "settings":{
+      "theme":"default"
+   },
+   "timeline":[
+      {
+         "cardtitle":"Welcome to the timeline tool",
+         "cardevent":"Right Now!",
+         "cardtext":"This is a little addition to help you plan out the events of your story.\n\nYou can create new items by using the button below OR  click on the logo by a card to insert a new cards above it!\n\nDelete by clicking on the trashcan!\n\nYou can easily re-order events by dragging and dropping!\n\nEnjoy\n\nIain"
+      }
+   ]
+}

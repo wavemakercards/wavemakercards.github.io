@@ -1,0 +1,175 @@
+body {
+  background-color: #eeeeee;
+  color: #424242;
+}
+.logo {
+  fill: #424242;
+}
+.modal {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #424242;
+}
+.modal-body,
+.modal-content {
+  background-color: #eeeeee;
+}
+#loadingScreen {
+  /*Just for Theming Colors*/
+  background-color: #eeeeee;
+  color: #424242;
+}
+
+.addNewCard {
+  color: #424242;
+}
+#EditorContainer {
+  background-color: #fefefe;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#222222)"; /*IE 8*/
+  -moz-box-shadow: 0 0 20px -3px #222222; /*FF 3.5+*/
+  -webkit-box-shadow: 0 0 20px -3px #222222; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 0 20px -3px #222222; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#222222); /*IE 5.5-7*/
+}
+.close {
+  color: #424242;
+}
+.close:hover {
+  color: #424242;
+}
+
+#CardModal {
+  color: #424242;
+}
+.content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #424242;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+}
+
+.content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #424242;
+}
+
+#lhs_frame {
+  background-color: #eeeeee;
+}
+
+#center_frame {
+  background-color: #dddddd;
+}
+
+#rhs_frame {
+  background-color: #eeeeee;
+}
+#EditorContainer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.texteditor {
+  color: #424242;
+}
+
+.logo-top {
+  fill: #424242;
+}
+.logo-bottom {
+  fill: #e0e0e0;
+}
+
+.wmcard {
+  color: #424242;
+  border: 1px solid #e0e0e0;
+  background-color: #fefefe;
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#585858)";/*IE 8*/
+  /*-moz-box-shadow: 0 0 20px 6px rgba(88,88,88,0.5);/*FF 3.5+*/
+  /*-webkit-box-shadow: 0 0 20px 6px rgba(88,88,88,0.5);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  /*box-shadow: 0 0 20px 6px rgba(88,88,88,0.5);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  /*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#585858); /*IE 5.5-7*/
+}
+
+#saveAlert {
+  background-color: #424242;
+  color: #fefefe;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=0, Color=#585858)"; /*IE 8*/
+  -moz-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*FF 3.5+*/
+  -webkit-box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 0 20px 6px rgba(88, 88, 88, 0.5); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=135, Color=#585858); /*IE 5.5-7*/
+}
+
+#wordCount {
+  background-color: #fefefe;
+  color: #424242;
+}
+
+#navsystem {
+  background-color: #eeeeee;
+}
+
+.navbtn {
+  background: #eeeeee;
+  color: #424242;
+}
+.navbtn:hover {
+  background: #eeeeee;
+  color: #424242;
+}
+
+.sideBtn {
+  background: #bdbdbd;
+  color: #424242;
+}
+.sideBtn:hover {
+  background: #eeeeee;
+  color: #424242;
+}
+
+.sidebar-nav {
+}
+
+.sidebar-nav li {
+  color: #424242;
+}
+
+.sidebar-nav > li > i {
+}
+
+.sidebar-nav li:hover {
+  color: #424242;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+}
+
+.sidebar-nav > .sidebar-brand {
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #9e9e9e;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #424242;
+  background: none;
+}
+.deleteCard,
+.deleteButton {
+  color: #424242;
+}
+.markAsDone {
+  background-color: #eeeeee;
+  color: #424242;
+}
+.markAsDone .smallButtons {
+  color: #424242;
+}
+
+.smallButtons {
+  color: #424242;
+}
