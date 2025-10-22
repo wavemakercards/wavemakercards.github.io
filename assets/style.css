@@ -1,24 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 html,
 body {
   height: 100%;
 }
 
 body {
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
+  flex-direction: column;
   align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  padding-top: 40px;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 20px;
   padding-bottom: 40px;
   background-color: #222222;
-  color:#fafafa;
-  font-family: 'Raleway', sans-serif;
-
+  color: #fafafa;
+  font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .centerbox {
@@ -26,23 +33,67 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .foot{
   font-size: 0.7rem;
   padding:10px;
-  text-align: left;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
 }
 .foot>a{
   color:#ccc;
   width:100%;
+  display: block;
+  text-align: center;
+  margin: 0.1em 0;
+  word-break: break-all;
 }
 .foot i{
-width:20px;
+  width:20px;
   padding:5px;
   border-radius: 5px;
   margin-right:10px;
-  margin-bottom: 5px;;
+  margin-bottom: 5px;
   color:#222;
   background-color: #ccc;
+  vertical-align: middle;
+}
+
+a.btn, a.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0.3em 0;
+}
+
+h1, h5 {
+  font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #fafafa;
+  text-shadow: 0 2px 8px #111a;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #b0b0b0;
+  text-shadow: 0 1px 4px #1118;
 }
